@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<update>
+        <version>1.1</version>
+        <description>这里写一些这个版本的特点</description>
+        <apkurl>http://10.0.2.2/new.apk</apkurl>
+        <!--这里的ip地址一定要写你服务器所在的电脑的ip地址，我们会在Security这个目录下面放置一下new.apk的，用来更新的-->
+</update>
