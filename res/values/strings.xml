@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">SplashActivity</string>
-    <string name="version">版本号</string>
-    <string name="main">手机卫士</string>
-    <string name="hello_world">Hello world!</string>
-
-
-</resources>
