@@ -37,7 +37,8 @@
                         android:id="@+id/bt_protected_first_yes"
                         android:layout_width="140dip"
                         android:layout_height="40dip"
-                        android:text="@string/protectedYes"/>
+                        android:text="@string/protectedYes"
+                        android:background="@drawable/xmlbutton_selector"/>
 
                 <Button android:layout_width="140dip" android:layout_height="40dip"
                         android:id="@+id/bt_protected_first_no"

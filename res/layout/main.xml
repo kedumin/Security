@@ -27,7 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:verticalSpacing="8dip"
-        android:numColumns="2" />
+        android:numColumns="2"
+        android:listSelector="@drawable/item_background_select"/>
 
 </LinearLayout>
 

@@ -2,6 +2,7 @@ package com.xiaobin.security.adapter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,11 +59,26 @@ public class MainUIAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view=layoutInflater.inflate(R.layout.main_item,null);
-        imageView=(ImageView)view.findViewById(R.id.iv_main_icon);
-        textView=(TextView)view.findViewById(R.id.tv_main_name);
-        imageView.setImageResource(ICONS[position]);
-        textView.setText(NAMES[position]);
+        //convertView相当于缓存一样，只要我们判断一下它是不是为null,就可以知道现在这个view有没有绘制过出来
+        //如果没有，那么就重新绘制，如果有，那么就可以使用缓存啦，这样就可以大大节省view的绘制时间了，进行优化，使用listview更流畅
+        MainViews views;
+        View view;
+        if(convertView==null){
+            views=new MainViews();
+            view=layoutInflater.inflate(R.layout.main_item,null);
+            views.imageView=(ImageView)view.findViewById(R.id.iv_main_icon);
+            views.textView=(TextView)view.findViewById(R.id.tv_main_name);
+            views.imageView.setImageResource(ICONS[position]);
+            views.textView.setText(NAMES[position]);
+            view.setTag(views);
+        }else{
+            view=convertView;
+            views = (MainViews) view.getTag();
+            views.imageView=(ImageView)view.findViewById(R.id.iv_main_icon);
+            views.textView=(TextView)view.findViewById(R.id.tv_main_name);
+            views.imageView.setImageResource(ICONS[position]);
+            views.textView.setText(NAMES[position]);
+        }
 
         if(position==0){
             String name=sharedPreferences.getString("lostName","");
@@ -72,5 +88,10 @@ public class MainUIAdapter extends BaseAdapter {
         }
         return view;
 
+    }
+
+    private class MainViews{
+        ImageView imageView;
+        TextView textView;
     }
 }
