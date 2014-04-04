@@ -1,0 +1,2138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://www.apkbus.com/android-143144-1-1.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" class=" widthauto"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>【新提醒】Android项目实战--手机卫士10--GPS定位与发送短信指令 - Android实例教程 - Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户</title>
+<!-- 请置于所有广告位代码之前 -->
+<script type="text/javascript" charset="utf-8" src="./b_files/NTU3ODcwMg==.js"></script><script type="text/javascript" src="./b_files/m.js"></script><link href="./b_files/b.htm" rel="canonical">
+<meta name="keywords" content="Android项目实战--手机卫士10--GPS定位与发送短信指令">
+<meta name="description" content=" Android项目实战--手机卫士10--GPS定位与发送短信指令 ,Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户">
+<meta name="generator" content="Discuz! X3.1">
+<meta name="author" content="Discuz! Team and Comsenz UI Team">
+<meta name="copyright" content="2001-2013 Comsenz Inc.">
+<meta name="MSSmartTagsPreventParsing" content="True">
+<meta http-equiv="MSThemeCompatible" content="Yes">
+<!--<base href="http://www.apkbus.com/">--><base href="."><link rel="stylesheet" type="text/css" href="./b_files/style_22_common.css"><link rel="stylesheet" type="text/css" href="./b_files/style_22_forum_viewthread.css"><script type="text/javascript">var STYLEID = '22', STATICURL = 'static/', IMGDIR = 'static/image/common', VERHASH = 'jNP', charset = 'utf-8', discuz_uid = '172268', cookiepre = '0U6M_baf0_', cookiedomain = '.apkbus.com', cookiepath = '/', showusercard = '1', attackevasive = '0', disallowfloat = 'newthread', creditnotice = '4|下载豆|', defaultstyle = '', REPORTURL = 'aHR0cDovL3d3dy5hcGtidXMuY29tL2FuZHJvaWQtMTQzMTQ0LTEtMS5odG1s', SITEURL = 'http://www.apkbus.com/', JSPATH = 'data/cache/', DYNAMICURL = '';</script>
+<script src="./b_files/common.js" type="text/javascript"></script>
+<meta name="application-name" content="Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户">
+<meta name="msapplication-tooltip" content="Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户">
+<meta name="msapplication-task" content="name=移动开发者门户;action-uri=http://www.apkbus.com/portal.php;icon-uri=http://www.apkbus.com/static/image/common/portal.ico"><meta name="msapplication-task" content="name=安卓巴士论坛;action-uri=http://www.apkbus.com/forum.php;icon-uri=http://www.apkbus.com/static/image/common/bbs.ico">
+<meta name="msapplication-task" content="name=巴士站;action-uri=http://www.apkbus.com/group.php;icon-uri=http://www.apkbus.com/static/image/common/group.ico"><meta name="msapplication-task" content="name=安卓小家;action-uri=http://www.apkbus.com/home.php;icon-uri=http://www.apkbus.com/static/image/common/home.ico"><link rel="archives" title="Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户" href="http://www.apkbus.com/archiver/">
+<link rel="stylesheet" id="css_widthauto" type="text/css" href="./b_files/style_22_widthauto.css">
+<script type="text/javascript">HTMLNODE.className += ' widthauto'</script>
+<script src="./b_files/forum.js" type="text/javascript"></script>
+<link id="css_forum_moderator" type="text/css" rel="stylesheet" href="./b_files/style_22_forum_moderator.css"><script type="text/javascript" id="YWPWYYWYDaYOIEHEaOXFOOFjlQJZabEJ" charset="UTF-8" src="./b_files/smilies.js"></script><script type="text/javascript" src="./b_files/hu"></script></head>
+
+<body id="nv_forum" class="pg_viewthread" onkeydown="if(event.keyCode==27) return false;"><a style="width: 92px; height: 22px; background-image: url(http://open.t.qq.com/apps/qshare/images/icon.gif); background-color: rgb(255, 0, 0); position: absolute; display: none; background-position: initial initial; background-repeat: no-repeat no-repeat;" href="javascript:;"></a>
+<div id="append_parent"><div id="fastpostsml_menu" class="sllt" style="display: none;"><div id="fastpostsmiliesdiv" style="overflow: hidden;"><div id="fastpostsmiliesdiv_tb" class="tb tb_s cl" style="width: 264px;"><ul><li id="fastpoststype_6" onclick="smilies_switch(&#39;fastpostsmiliesdiv&#39;, &#39;8&#39;, 6, 1, &#39;fastpost&#39;);if(CURRENTSTYPE) {$(&#39;fastpoststype_&#39;+CURRENTSTYPE).className=&#39;&#39;;}this.className=&#39;current&#39;;CURRENTSTYPE=6;doane(event);"><a href="javascript:;" hidefocus="true">小小猴</a></li><li id="fastpoststype_7" onclick="smilies_switch(&#39;fastpostsmiliesdiv&#39;, &#39;8&#39;, 7, 1, &#39;fastpost&#39;);if(CURRENTSTYPE) {$(&#39;fastpoststype_&#39;+CURRENTSTYPE).className=&#39;&#39;;}this.className=&#39;current&#39;;CURRENTSTYPE=7;doane(event);"><a href="javascript:;" hidefocus="true">洋葱头</a></li><li id="fastpoststype_8" onclick="smilies_switch(&#39;fastpostsmiliesdiv&#39;, &#39;8&#39;, 8, 1, &#39;fastpost&#39;);if(CURRENTSTYPE) {$(&#39;fastpoststype_&#39;+CURRENTSTYPE).className=&#39;&#39;;}this.className=&#39;current&#39;;CURRENTSTYPE=8;doane(event);"><a href="javascript:;" hidefocus="true">兔兔子</a></li><li class="current" id="fastpoststype_4" onclick="smilies_switch(&#39;fastpostsmiliesdiv&#39;, &#39;8&#39;, 4, 1, &#39;fastpost&#39;);if(CURRENTSTYPE) {$(&#39;fastpoststype_&#39;+CURRENTSTYPE).className=&#39;&#39;;}this.className=&#39;current&#39;;CURRENTSTYPE=4;doane(event);"><a href="javascript:;" hidefocus="true">android机器人</a></li></ul></div><div id="fastpostsmiliesdiv_data"><table id="fastpostsmiliesdiv_table" cellpadding="0" cellspacing="0"><tbody><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 49)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:4_137:}&#39;)" id="fastpostsmilie_137_td"><img id="smilie_137" width="20" height="20" src="./b_files/Jiong.png" alt="{:4_137:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:4_136:}&#39;)" id="fastpostsmilie_136_td"><img id="smilie_136" width="20" height="14" src="./b_files/Eclair.png" alt="{:4_136:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:4_135:}&#39;)" id="fastpostsmilie_135_td"><img id="smilie_135" width="20" height="19" src="./b_files/Headstand.png" alt="{:4_135:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:4_134:}&#39;)" id="fastpostsmilie_134_td"><img id="smilie_134" width="20" height="20" src="./b_files/Donut.png" alt="{:4_134:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Skateboard:}&#39;)" id="fastpostsmilie_99_td"><img id="smilie_99" width="20" height="20" src="./b_files/Skateboard.gif" alt="{:Skateboard:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Caca:}&#39;)" id="fastpostsmilie_90_td"><img id="smilie_90" width="20" height="17" src="./b_files/Caca.gif" alt="{:Caca:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Jump:}&#39;)" id="fastpostsmilie_94_td"><img id="smilie_94" width="20" height="17" src="./b_files/Jump.gif" alt="{:Jump:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Music:}&#39;)" id="fastpostsmilie_96_td"><img id="smilie_96" width="20" height="20" src="./b_files/Music.gif" alt="{:Music:}"></td></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Nose:}&#39;)" id="fastpostsmilie_97_td"><img id="smilie_97" width="20" height="17" src="./b_files/Nose.gif" alt="{:Nose:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Pin:}&#39;)" id="fastpostsmilie_98_td"><img id="smilie_98" width="20" height="17" src="./b_files/Pin.gif" alt="{:Pin:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Snicker:}&#39;)" id="fastpostsmilie_100_td"><img id="smilie_100" width="20" height="12" src="./b_files/Snicker.gif" alt="{:Snicker:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Surprised:}&#39;)" id="fastpostsmilie_101_td"><img id="smilie_101" width="20" height="11" src="./b_files/Surprised.gif" alt="{:Surprised:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Sweat:}&#39;)" id="fastpostsmilie_102_td"><img id="smilie_102" width="20" height="16" src="./b_files/Sweat.gif" alt="{:Sweat:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Music 2:}&#39;)" id="fastpostsmilie_95_td"><img id="smilie_95" width="20" height="20" src="./b_files/Music 2.gif" alt="{:Music 2:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Hello:}&#39;)" id="fastpostsmilie_93_td"><img id="smilie_93" width="20" height="20" src="./b_files/Hello.gif" alt="{:Hello:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 37)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Cupcake:}&#39;)" id="fastpostsmilie_92_td"><img id="smilie_92" width="15" height="20" src="./b_files/Cupcake.gif" alt="{:Cupcake:}"></td></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Cry:}&#39;)" id="fastpostsmilie_91_td"><img id="smilie_91" width="20" height="12" src="./b_files/Cry.gif" alt="{:Cry:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Bye:}&#39;)" id="fastpostsmilie_89_td"><img id="smilie_89" width="20" height="20" src="./b_files/Bye.gif" alt="{:Bye:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Black Line:}&#39;)" id="fastpostsmilie_87_td"><img id="smilie_87" width="20" height="10" src="./b_files/Black Line.gif" alt="{:Black Line:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 50)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Board:}&#39;)" id="fastpostsmilie_88_td"><img id="smilie_88" width="20" height="12" src="./b_files/Board.gif" alt="{:Board:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 41)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Big Chin:}&#39;)" id="fastpostsmilie_86_td"><img id="smilie_86" width="17" height="20" src="./b_files/Big Chin.gif" alt="{:Big Chin:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 41)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:Big Chin 2:}&#39;)" id="fastpostsmilie_85_td"><img id="smilie_85" width="17" height="20" src="./b_files/Big Chin 2.gif" alt="{:Big Chin 2:}"></td></tr></tbody></table></div><div class="sllt_p" id="fastpostsmiliesdiv_page"></div></div></div><script type="text/javascript" charset="utf-8" src="./b_files/common_smilies_var.js"></script></div><div id="ajaxwaitid"></div>
+<div id="toptb" class="cl">
+<div class="wp">
+<div class="z"><a href="http://www.apkbus.com/" onclick="addFavorite(this.href, &#39;Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户&#39;);return false;">收藏本站</a><a href="http://dev.apkbus.com/" target="_blank">Android开发</a><a href="http://android.apkbus.com/" target="_blank">安卓开发</a><a href="http://api.apkbus.com/" target="_blank">Android中文文档</a><a href="http://www.apkbus.com/design/" target="_blank">Android design</a><a href="http://code4app.com/" title="ios开发" target="_blank" style="font-weight: bold;color: red">ios开发</a><script type="text/javascript">var _speedMark = new Date();</script></div>
+<div class="y">
+<a id="switchblind" href="javascript:;" onclick="toggleBlind(this)" title="开启辅助访问" class="switchblind">开启辅助访问</a>
+<a href="http://www.apkbus.com/portal.php?mod=portalcp&ac=article">投稿</a><a href="javascript:;" id="switchwidth" onclick="widthauto(this)" title="切换到窄版" class="switchwidth">切换到窄版</a>
+</div>
+</div>
+</div>
+
+<ul id="myprompt_menu" class="p_pop" style="position: absolute; z-index: 301; left: 1650.03125px; top: 134px;" initialized="true">				
+<li><a href="http://www.apkbus.com/home.php?mod=space&do=pm" id="pm_ntc" style="background-repeat: no-repeat; background-position: 0 50%;" class=""><em class="prompt_news_0"></em>消息</a></li>
+<li><a href="http://www.apkbus.com/home.php?mod=follow&do=follower"><em class="prompt_follower_0"></em>新听众</a></li>
+<li><a href="http://www.apkbus.com/home.php?mod=space&do=notice&view=system"><em class="notice_system"></em>系统提醒(<span class="rq">7</span>)</a></li>
+<li class="ignore_noticeli"><a href="javascript:;" onclick="setcookie(&#39;ignore_notice&#39;, 1);hideMenu(&#39;myprompt_menu&#39;)" title="暂不提醒"><em class="ignore_notice"></em></a></li>
+</ul>
+<ul id="myitem_menu" class="p_pop" style="display: none;">
+<li><a href="http://www.apkbus.com/forum.php?mod=guide&view=my">帖子</a></li>
+<li><a href="http://www.apkbus.com/home.php?mod=space&do=favorite&view=me">收藏</a></li>
+<li><a href="http://www.apkbus.com/home.php?mod=space&do=friend">好友</a></li>
+</ul>
+<div id="qmenu_menu" class="p_pop " style="display: none;">
+<ul class="cl nav"><li><a href="http://www.apkbus.com/forum.php?mod=guide&view=my" style="background-image:url(http://www.apkbus.com/static/image/feed/thread_b.png) !important">帖子</a></li>
+<li><a href="http://www.apkbus.com/home.php?mod=space&do=friend" style="background-image:url(http://www.apkbus.com/static/image/feed/friend_b.png) !important">好友</a></li>
+<li><a href="http://www.apkbus.com/home.php?mod=magic" style="background-image:url(http://www.apkbus.com/static/image/feed/magic_b.png) !important">道具</a></li>
+<li><a href="http://www.apkbus.com/home.php?mod=space&do=favorite&view=me" style="background-image:url(http://www.apkbus.com/static/image/feed/favorite_b.png) !important">收藏</a></li>
+<li><a href="http://www.apkbus.com/home.php?mod=medal" style="background-image:url(http://www.apkbus.com/static/image/feed/medal_b.png) !important">勋章</a></li>
+<li><a href="http://www.apkbus.com/home.php?mod=task" style="background-image:url(http://www.apkbus.com/static/image/feed/task_b.png) !important">任务</a></li>
+<li><a href="http://www.apkbus.com/forum.php?mod=collection&op=my" style="background-image:url(http://www.apkbus.com/static/image/feed/collection_b.png) !important">淘帖</a></li>
+<li><a href="http://www.apkbus.com/home.php?mod=space&do=blog" style="background-image:url(http://www.apkbus.com/static/image/feed/blog_b.png) !important">日志</a></li>
+</ul>
+<div id="fjump_menu" class="btda"></div></div><div class="wp a_h"> <iframe src="./b_files/openSiteAd.htm" width="960" height="60" frameborder="0" scrolling="no"></iframe>
+</div><div id="hd">
+<div class="wp">
+<div class="hdc cl"><h2><a href="http://www.apkbus.com/" title="Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户"><img src="./b_files/logo.png" alt="Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户" border="0"></a></h2><div id="um">
+<div class="avt y"><a href="http://www.apkbus.com/home.php?mod=space&uid=172268"><img src="./b_files/avatar.php"></a></div>
+<p>
+<strong class="vwmy"><a href="http://www.apkbus.com/home.php?mod=space&uid=172268" target="_blank" title="访问我的空间">kedumin</a></strong>
+
+
+<span class="pipe">|</span><a href="http://www.apkbus.com/connect.php?mod=config" target="_blank"><img src="./b_files/qq_bind_small.gif" class="qq_bind" align="absmiddle" alt="QQ绑定"></a>
+
+<script>function showmyrepeats() {if(!$('myrepeats_menu')) {menu=document.createElement('div');menu.id='myrepeats_menu';menu.style.display='none';menu.className='p_pop';$('append_parent').appendChild(menu);ajaxget('plugin.php?id=myrepeats:switch&list=yes','myrepeats_menu','ajaxwaitid');}showMenu({'ctrlid':'myrepeats','duration':2});}</script><span class="pipe">|</span><a id="myrepeats" href="http://www.apkbus.com/home.php?mod=spacecp&ac=plugin&id=myrepeats:memcp" class="showmenu cur1" onmouseover="delayShow(this, showmyrepeats)">马甲</a>
+<span class="pipe">|</span><a href="javascript:;" id="myitem" class="showmenu" onmouseover="showMenu({&#39;ctrlid&#39;:&#39;myitem&#39;});">我的</a>
+<span class="pipe">|</span><a href="http://www.apkbus.com/home.php?mod=spacecp">设置</a>
+<span class="pipe">|</span><a href="http://www.apkbus.com/home.php?mod=space&do=pm" id="pm_ntc">消息</a>
+<span class="pipe">|</span><a href="http://www.apkbus.com/home.php?mod=space&do=notice" id="myprompt" class="a showmenu new" onmouseover="showMenu({&#39;ctrlid&#39;:&#39;myprompt&#39;});" initialized="true">提醒(7)</a><span id="myprompt_check"></span>
+<script language="javascript">delayShow($('myprompt'), function() {showMenu({'ctrlid':'myprompt','duration':3})});</script><span class="pipe">|</span><a href="http://www.apkbus.com/portal.php?mod=portalcp">门户管理</a>
+<span class="pipe">|</span><a href="http://www.apkbus.com/member.php?mod=logging&action=logout&formhash=21a9e52b">退出</a>
+</p>
+<p>
+<a href="http://www.apkbus.com/home.php?mod=spacecp&ac=credit&showcredit=1" id="extcreditmenu" onmouseover="delayShow(this, showCreditmenu);" class="showmenu">积分: 121</a>
+<span class="pipe">|</span><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup" id="g_upmine" class="showmenu" onmouseover="delayShow(this, showUpgradeinfo)">用户组: Android感染者</a>
+</p>
+</div>
+</div>
+
+<div id="nv" style="">
+<a href="javascript:;" id="qmenu" onmouseover="delayShow(this, function () {showMenu({&#39;ctrlid&#39;:&#39;qmenu&#39;,&#39;pos&#39;:&#39;34!&#39;,&#39;ctrlclass&#39;:&#39;a&#39;,&#39;duration&#39;:2});showForummenu(43);})">快捷导航</a>
+<ul><li id="mn_portal"><a href="http://www.apkbus.com/portal.php" hidefocus="true" title="Portal">移动开发者门户<span>Portal</span></a></li><li class="a" id="mn_forum"><a href="http://www.apkbus.com/forum.php" hidefocus="true" title="BBS">安卓巴士论坛<span>BBS</span></a></li><li id="mn_N516c"><a href="http://www.apkbus.com/job/" hidefocus="true" target="_blank">招聘</a></li><li id="mn_N1f06" onmouseover="showMenu({&#39;ctrlid&#39;:this.id,&#39;ctrlclass&#39;:&#39;hover&#39;,&#39;duration&#39;:2})"><a href="http://luo.apkbus.com/" hidefocus="true" target="_blank" style="color: orange">视频教程</a></li><li id="mn_Ne30e"><a href="http://www.apkbus.com/plugin.php?id=auction" hidefocus="true" title="Auction" style="color: orange">商城<span>Auction</span></a></li><li id="mn_N5b93"><a href="http://www.apkbus.com/plugin.php?id=dsu_paulsign:sign" hidefocus="true" target="_blank">签到</a></li><li id="mn_Nc624"><a href="http://salon.apkbus.com/" hidefocus="true" target="_blank" style="color: yellow">沙龙</a></li><li id="mn_N8175"><a href="http://book.apkbus.com/" hidefocus="true" target="_blank">图书</a></li><li id="mn_Nc66e"><a href="http://www.apkbus.com/zhoukan/67/" hidefocus="true" target="_blank" style="color: red">周刊</a></li><li id="mn_N737b"><a href="http://d.apkbus.com/" hidefocus="true" target="_blank">源码</a></li><li id="mn_forum_11"><a href="http://www.apkbus.com/forum.php?mod=collection" hidefocus="true" title="Collection">淘帖<span>Collection</span></a></li><li id="mn_N5149"><a href="http://www.apkbus.com/plugin.php?id=moodwall" hidefocus="true" title="快来抒发您的心情吧！">心情墙<span>快来抒发您的心情吧！</span></a></li><li id="mn_Nfce9"><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=credit&op=buy" hidefocus="true" target="_blank" style="color: red">获取下载豆</a></li><li id="mn_N0fb3"><a href="http://www.php100.com/" hidefocus="true" target="_blank">php开发</a></li></ul>
+</div>
+<ul class="p_pop h_pop" id="plugin_menu" style="display: none">  <li><a href="http://www.apkbus.com/plugin.php?id=dsu_paulsign:sign" id="mn_plink_sign">每日签到</a></li>
+ </ul>
+<div class="p_pop h_pop" id="mn_userapp_menu" style="display: none"></div><ul class="p_pop h_pop" id="mn_N1f06_menu" style="display: none"><li><a href="http://www.apkbus.com/qianfeng/" hidefocus="true" target="_blank">千锋网Android 开发视频教程合集</a></li><li><a href="http://www.apkbus.com/unity/" hidefocus="true" target="_blank">Unity 视频开发教程</a></li><li><a href="http://luo.apkbus.com/" hidefocus="true" target="_blank">老罗Android开发视频教程</a></li><li><a href="http://www.apkbus.com/ios/" hidefocus="true" target="_blank">iphone开发视频教程</a></li><li><a href="http://mars.apkbus.com/" hidefocus="true" target="_blank">Mars Android开发视频教程</a></li><li><a href="http://www.apkbus.com/heima/" hidefocus="true" target="_blank">黑马Android开发视频教程125集</a></li></ul><div id="mu" class="cl">
+</div><div id="scbar" class="scbar_narrow cl">
+<form id="scbar_form" method="get" autocomplete="off" onsubmit="searchFocus($(&#39;scbar_txt&#39;))" action="http://search.apkbus.com/f/discuz" target="_blank">
+<input type="hidden" name="mod" id="scbar_mod" value="forum">
+<input type="hidden" name="formhash" value="21a9e52b">
+<input type="hidden" name="srchtype" value="title">
+<input type="hidden" name="srhfid" value="43">
+<input type="hidden" name="srhlocality" value="forum::viewthread">
+<input type="hidden" name="sId" value="5578702">
+<input type="hidden" name="ts" value="1396623928">
+<input type="hidden" name="cuId" value="172268">
+<input type="hidden" name="cuName" value="kedumin">
+<input type="hidden" name="gId" value="10">
+<input type="hidden" name="agId" value="0">
+<input type="hidden" name="egIds" value="">
+<input type="hidden" name="fmSign" value="">
+<input type="hidden" name="ugSign10" value="">
+<input type="hidden" name="ext_vgIds" value="0">
+<input type="hidden" name="sign" value="76e6662f12ab0e2e994e14b76f7604cb">
+<input type="hidden" name="charset" value="utf-8">
+<input type="hidden" name="source" value="discuz">
+<input type="hidden" name="fId" id="srchFId" value="0">
+<input type="hidden" name="q" id="cloudsearchquery" value="">
+
+<style>
+#scbar { overflow: visible; position: relative; }
+#sg{ background: #FFF; width:456px; border: 1px solid #B2C7DA; }
+.scbar_narrow #sg { width: 316px; }
+#sg li { padding:0 8px; line-height:30px; font-size:14px; }
+#sg li span { color:#999; }
+.sml { background:#FFF; cursor:default; }
+.smo { background:#E5EDF2; cursor:default; }
+            </style>
+            <div style="display: none; position: absolute; top:37px; left:44px;" id="sg">
+                <div id="st_box" cellpadding="2" cellspacing="0"></div>
+            </div>
+<table cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="scbar_icon_td"></td>
+<td class="scbar_txt_td"><input type="text" name="srchtxt" id="scbar_txt" value="请输入搜索内容" autocomplete="off" x-webkit-speech="" speech="" class=" xg1" placeholder="请输入搜索内容"></td>
+<td class="scbar_type_td"><a href="javascript:;" id="scbar_type" class="xg1" onclick="showMenu(this.id)" hidefocus="true">帖子</a></td>
+<td class="scbar_btn_td"><button type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="pn pnc" value="true"><strong class="xi2">搜索</strong></button></td>
+<td class="scbar_hot_td">
+<div id="scbar_hot">
+<strong class="xw1">热搜: </strong>
+
+<a href="http://search.apkbus.com/f/discuz?q=%E4%BA%8C%E7%BB%B4%E7%A0%81&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">二维码</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E8%81%8A%E5%A4%A9&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">聊天</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%89%AB%E6%8F%8F&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">二维码扫描</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E4%BC%A0%E6%84%9F%E5%99%A8&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">传感器</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E6%B8%B8%E6%88%8F&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">游戏</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E5%AE%9A%E4%BD%8D&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">定位</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E6%89%8B%E5%8A%BF%E7%BB%98%E5%9B%BE&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">手势绘图</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E5%B0%8F%E9%A1%B9%E7%9B%AE&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">小项目</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E7%9B%B8%E6%A1%86&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">相框</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E7%BB%98%E5%9B%BE&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">绘图</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E6%B6%82%E9%B8%A6&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">涂鸦</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E6%8B%A8%E6%89%93%E7%94%B5%E8%AF%9D&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">拨打电话</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E8%AE%B0%E4%BA%8B%E6%9C%AC&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">记事本</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E5%AE%9A%E6%97%B6%E5%99%A8&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">定时器</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E9%80%9A%E8%AF%9D%E8%AE%B0%E5%BD%95&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">通话记录</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E7%9F%AD%E4%BF%A1%E7%BE%A4%E5%8F%91&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">短信群发</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=listview&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">listview</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">音乐播放器</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E9%A1%B9%E7%9B%AE%E4%BE%8B%E5%AD%90&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">项目例子</a>
+
+
+
+<a href="http://search.apkbus.com/f/discuz?q=%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE&source=hotsearch&sId=5578702&ts=1396623928&cuId=172268&cuName=kedumin&gId=10&agId=0&egIds=&fmSign=&ugSign10=&ext_vgIds=0&sign=76e6662f12ab0e2e994e14b76f7604cb&charset=utf-8" target="_blank" class="xi2" sc="1">百度地图</a>
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</form>
+</div>
+<ul id="scbar_type_menu" class="p_pop" style="display: none;"><li><a href="javascript:;" rel="curforum" fid="43">本版</a></li><li><a href="javascript:;" rel="article">文章</a></li><li><a href="javascript:;" rel="forum" class="curtype">帖子</a></li><li><a href="javascript:;" rel="blog">日志</a></li><li><a href="javascript:;" rel="album">相册</a></li><li><a href="javascript:;" rel="group">巴士站</a></li><li><a href="javascript:;" rel="user">用户</a></li></ul>
+<script type="text/javascript">
+initSearchmenu('scbar', 'http://search.apkbus.com/f/discuz');
+</script>
+</div>
+</div>
+
+
+<div id="wp" class="wp">
+<script type="text/javascript">var fid = parseInt('43'), tid = parseInt('143144');</script>
+<script src="./b_files/forum_moderate.js" type="text/javascript"></script>
+
+<script src="./b_files/forum_viewthread.js" type="text/javascript"></script>
+<script type="text/javascript">zoomstatus = parseInt(1);var imagemaxwidth = '800';var aimgcount = new Array();</script>
+
+<style id="diy_style" type="text/css"></style>
+<!--[diy=diynavtop]--><div id="diynavtop" class="area"></div><!--[/diy]-->
+<div id="pt" class="bm cl">
+<div class="z">
+<a href="http://www.apkbus.com/" class="nvhm" title="首页">Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户</a><em>»</em><a href="http://www.apkbus.com/forum.php">安卓巴士论坛</a> <em>›</em> <a href="http://www.apkbus.com/forum.php?gid=1">Android开发资料共享区</a> <em>›</em> <a href="http://www.apkbus.com/forum.php?mod=forumdisplay&fid=43&page=1">Android实例教程</a> <em>›</em> <a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144">Android项目实战--手机卫士10--GPS定位与发送短信指令 ...</a>
+</div>
+</div>
+
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="wp cl">
+<div id="pgt" class="pgs mbm cl pbm bbs">
+<div class="pgt"><div class="pg"><strong>1</strong><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&extra=page%3D1&page=2">2</a><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&extra=page%3D1&page=3">3</a><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&extra=page%3D1&page=4">4</a><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&extra=page%3D1&page=5">5</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location=&#39;forum.php?mod=viewthread&amp;tid=143144&amp;extra=page%3D1&amp;page=&#39;+this.value;; doane(event);}"><span title="共 5 页"> / 5 页</span></label><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&extra=page%3D1&page=2" class="nxt">下一页</a></div></div>
+<span class="y pgb" id="visitedforums" onmouseover="$(&#39;visitedforums&#39;).id = &#39;visitedforumstmp&#39;;this.id = &#39;visitedforums&#39;;showMenu({&#39;ctrlid&#39;:this.id,&#39;pos&#39;:&#39;34&#39;})"><a href="http://www.apkbus.com/forum.php?mod=forumdisplay&fid=43&page=1">返回列表</a></span>
+<a id="newspecial" onmouseover="$(&#39;newspecial&#39;).id = &#39;newspecialtmp&#39;;this.id = &#39;newspecial&#39;;showMenu({&#39;ctrlid&#39;:this.id})" onclick="showWindow(&#39;newthread&#39;, &#39;forum.php?mod=post&amp;action=newthread&amp;fid=43&#39;)" href="javascript:;" title="发新帖"><img src="./b_files/pn_post.png" alt="发新帖"></a><a id="post_reply" onclick="showWindow(&#39;reply&#39;, &#39;forum.php?mod=post&amp;action=reply&amp;fid=43&amp;tid=143144&#39;)" href="javascript:;" title="回复"><img src="./b_files/pn_reply.png" alt="回复"></a>
+</div>
+
+<ul class="p_pop" id="newspecial_menu" style="display: none">
+<li><a href="http://www.apkbus.com/forum.php?mod=post&action=newthread&fid=43">发表帖子</a></li><li class="poll"><a href="http://www.apkbus.com/forum.php?mod=post&action=newthread&fid=43&special=1">发起投票</a></li><li class="reward"><a href="http://www.apkbus.com/forum.php?mod=post&action=newthread&fid=43&special=3">发布悬赏</a></li><li class="debate"><a href="http://www.apkbus.com/forum.php?mod=post&action=newthread&fid=43&special=5">发起辩论</a></li><li class="activity"><a href="http://www.apkbus.com/forum.php?mod=post&action=newthread&fid=43&special=4">发起活动</a></li><li class="trade"><a href="http://www.apkbus.com/forum.php?mod=post&action=newthread&fid=43&special=2">出售商品</a></li></ul>
+<div id="modmenu" class="xi2 pbm"><a href="http://www.apkbus.com/portal.php?mod=portalcp&ac=article&from_idtype=tid&from_id=143144">生成文章</a><span class="pipe" style="visibility: hidden;">|</span></div>
+
+
+<div id="postlist" class="pl bm">
+<table cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls ptn pbn">
+<div class="hm ptn">
+<span class="xg1">查看:</span> <span class="xi1">4316</span><span class="pipe">|</span><span class="xg1">回复:</span> <span class="xi1">44</span>
+</div>
+</td>
+<td class="plc ptm pbn vwthd">
+<div class="y">
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&action=printable&tid=143144" title="打印" target="_blank"><img src="./b_files/print.png" alt="打印" class="vm"></a>
+<a href="http://www.apkbus.com/forum.php?mod=redirect&goto=nextoldset&tid=143144" title="上一主题"><img src="./b_files/thread-prev.png" alt="上一主题" class="vm"></a>
+<a href="http://www.apkbus.com/forum.php?mod=redirect&goto=nextnewset&tid=143144" title="下一主题"><img src="./b_files/thread-next.png" alt="下一主题" class="vm"></a>
+</div>
+<h1 class="ts">
+<span id="thread_subject">Android项目实战--手机卫士10--GPS定位与发送短信指令</span>
+</h1>
+<span class="xg1">
+&nbsp;<img src="./b_files/recommend_1.gif" alt="" title="评价指数 1">
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144" onclick="return copyThreadUrl(this, &#39;Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户&#39;)">[复制链接]</a>
+</span>
+</td>
+</tr>
+</tbody></table>
+
+
+<table cellspacing="0" cellpadding="0" class="ad">
+<tbody><tr>
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table><div id="post_1660165"><table id="pid1660165" class="plhin" summary="pid1660165" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar1660165" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="http://www.apkbus.com/home.php?mod=space&uid=660" target="_blank" class="xw1">chenmeng</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo1660165" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo1660165_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="http://www.apkbus.com/home.php?mod=space&uid=660" target="_blank" class="xi2">chenmeng</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=660&do=profile" target="_blank" class="xi2">4058</a></dd>
+</dl><div class="imicn">
+<a href="http://www.apkbus.com/home.php?mod=space&uid=660&do=profile" target="_blank" title="查看详细资料"><img src="./b_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo1660165&#39;)"><a href="http://www.apkbus.com/home.php?mod=space&uid=660" class="avtm" target="_blank"><img src="./b_files/avatar(1).php"></a></div>
+</div>
+<p>该用户从未签到</p><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=660&do=thread&type=thread&view=me&from=space" class="xi2">321</a></p>主题</th><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=660&do=thread&type=reply&view=me&from=space" class="xi2">384</a></p>帖子</th><td><p><a href="http://www.apkbus.com/home.php?mod=space&uid=660&do=profile" class="xi2">4058</a></p>积分</td></tr></tbody></table></div>
+<p><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=13" target="_blank"><img src="./b_files/common_13_usergroup_icon.png" alt="" class="vm"></a></p>
+<p><em><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=13" target="_blank">Android伯爵</a></em></p>
+
+
+<p><span id="g_up1660165" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;});"></span></p>
+<div id="g_up1660165_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android伯爵, 积分 4058, 距离下一级还需 942 积分</div></div>
+
+
+<p><span class="pbg2" id="upgradeprogress_1660165" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;, &#39;menuid&#39;:&#39;g_up1660165_menu&#39;});"><span class="pbr2" style="width:52%;"></span></span></p>
+<div id="g_up1660165_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android伯爵, 积分 4058, 距离下一级还需 942 积分</div></div>
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=660&do=profile" target="_blank" class="xi2">4058</a></dd>
+</dl>
+
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="pm2"><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_660&touid=660&pmid=0&daterange=2&pid=1660165&tid=143144" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+	
+<td class="plc">
+<div class="pi">
+<div id="fj" class="y">
+<label class="z">电梯直达</label>
+<input type="text" class="px p_fre z" size="2" onkeyup="$(&#39;fj_btn&#39;).href=&#39;forum.php?mod=redirect&amp;ptid=143144&amp;authorid=0&amp;postno=&#39;+this.value" onkeydown="if(event.keyCode==13) {window.location=$(&#39;fj_btn&#39;).href;return false;}" title="跳转到指定楼层">
+<a href="javascript:;" id="fj_btn" class="z" title="跳转到指定楼层"><img src="./b_files/fj_btn.png" alt="跳转到指定楼层" class="vm"></a>
+</div>
+<strong>
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144" id="postnum1660165" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+楼主</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon1660165" src="./b_files/online_member.gif">
+<em id="authorposton1660165">发表于 2013-10-9 15:41:52</em>
+<span class="pipe">|</span>
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&page=1&authorid=660" rel="nofollow">只看该作者</a>
+<span class="none"><img src="./b_files/arw_r.gif" class="vm" alt="回帖奖励"></span>
+<span class="pipe show">|</span><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&extra=page%3D1&ordertype=1" class="show">倒序浏览</a>
+<span class="pipe show">|</span><a href="javascript:;" onclick="readmode($(&#39;thread_subject&#39;).innerHTML, 1660165);" class="show">阅读模式</a>
+</div>
+</div>
+</div><div class="pct"><div class="a_pt"><script async="" src="./b_files/adsbygoogle.js"></script>
+<!-- apkbus -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5869528727059635" data-ad-slot="9882699329" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><style type="text/css">.pcb{margin-right:0}</style><div class="pcb">
+ 
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_1660165">
+<br>
+Android项目实战--手机卫士09--防盗逻辑以及设置向导的完成<br>
+<a href="http://www.apkbus.com/android-143143-1-1.html" target="_blank">http://www.apkbus.com/android-143143-1-1.html</a><br>
+<br>
+<br>
+<br>
+<p style="line-height:26px;text-indent:nullem;text-align:left"><font color="#333333"><font face="Arial">由于周末有点事，所以没来得及继续更新我们的这个项目，今天终于有时间写一下啦。</font></font></p><p style="line-height:26px;text-indent:nullem;text-align:left"><font color="#333333"><font face="Arial">好啦，废话不多说，我们进入主题，今天我们要继续上一次讲的，就是手机被盗之后，获得手机所在的位置。</font></font></p><p style="line-height:26px;text-indent:nullem;text-align:left"><font color="#333333"><font face="Arial">上一次，我们说到了，如果我们的sim卡被人换掉了，那么就会发送一条短信到我们的原来设定的安全号码那里的，而今天，我们就要获取到手机的位置啦，以便追踪回手机。</font></font></p><p style="line-height:26px;text-indent:nullem;text-align:left"><font color="#333333"><font face="Arial">我们是这样设计的，我们通过发送一条短信，短信的内容就是一些要执行的操作的指令（比如说#*location*#），我们就在软件里面加入一个短信的广播，拦截到短信，然后分析是什么指令，然后就执行对应的操作，就像#*location*#这条指令一样，我们就可以理解为获取手机的位置。</font></font></p><br>
+<p style="line-height:26px;text-indent:nullem;text-align:left"><font color="#333333"><font face="Arial">所以我们要先新建一个类，用来提供手机的位置信息的</font></font></p><p style="line-height:26px;text-indent:nullem;text-align:left"><font color="#333333"><font face="Arial">com.xiaobin.security.engine.GPSInfoProvider</font></font></p><p style="line-height:26px;text-indent:nullem;text-align:left"><font color="#333333"><font face="Arial"></font></font></p><div class="blockcode"><div id="code_ix2"><ol><li><font color="#333333"><font face="Arial">package com.xiaobin.security.engine;<br>
+</font></font></li><li><font color="#333333"><font face="Arial"><br>
+</font></font></li><li><font color="#333333"><font face="Arial">import android.content.Context;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">import android.content.SharedPreferences;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">import android.content.SharedPreferences.Editor;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">import android.location.Criteria;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">import android.location.Location;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">import android.location.LocationListener;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">import android.location.LocationManager;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">import android.os.Bundle;<br>
+</font></font></li><li><font color="#333333"><font face="Arial"><br>
+</font></font></li><li><font color="#333333"><font face="Arial">/**<br>
+</font></font></li><li><font color="#333333"><font face="Arial"> * 这个类，我们要做成了单例模式，因为手机里面只有一个gps所以免得每次都新开一个对象<br>
+</font></font></li><li><font color="#333333"><font face="Arial"> * @author Administrator<br>
+</font></font></li><li><font color="#333333"><font face="Arial"> *<br>
+</font></font></li><li><font color="#333333"><font face="Arial"> */<br>
+</font></font></li><li><font color="#333333"><font face="Arial">public class GPSInfoProvider<br>
+</font></font></li><li><font color="#333333"><font face="Arial">{<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; private static GPSInfoProvider gpsInfoProvider;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; private static Context context;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; private static MyLocationListener listener;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; private LocationManager locationManager;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; private GPSInfoProvider()<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; /**<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;* 为了让这个方法一定执行完，所以我们加入了synchronized来修饰<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;* @return<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;*/<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; public static synchronized GPSInfoProvider getInstance(Context context)<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(gpsInfoProvider == null)<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; gpsInfoProvider = new GPSInfoProvider();<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; GPSInfoProvider.context = context;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return gpsInfoProvider;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; public String getLocation()<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; String provider = getBestProvider();<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //这个方法是位置更新的的操作，有四个参数<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第一个参数就是使用的定位设备啊，如gps，基站定位啊<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第二个参数就是多长时间更新一次定位信息，太频繁了会很耗电，根据自己程序的实际需要来进行确定<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第三个参数就是用户位移了多少米之后，就重新获取一次定位信息，太频繁了会很耗电，根据自己程序的实际需要来进行确定<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //最后一个参数就是在位置发生变化的回调方法<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; locationManager.requestLocationUpdates(provider, 60000, 50, getListener());<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //locationManager.getAllProviders();//它会把所以支持的定位方式都打列出来，这样就可以知道手机所支持的定位啦<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SharedPreferences sp = context.getSharedPreferences("config", Context.MODE_PRIVATE);<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; String location = sp.getString("lostLocation", "");<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return location;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; //停止gps<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; public void stopGPSListener()<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(locationManager != null)<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; locationManager.removeUpdates(getListener());<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; private String getBestProvider()<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Criteria criteria = new Criteria();<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //这个是定义它的定位精度的<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //Criteria.ACCURACY_COARSE&nbsp;&nbsp;这个是一般的定位<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //Criteria.ACCURACY_FINE&nbsp;&nbsp;这个是精准定位<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; criteria.setAccuracy(Criteria.ACCURACY_FINE);<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //设置是不是对海拔敏感的<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; criteria.setAltitudeRequired(false);<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //设置对手机的耗电量，定位要求越高，越耗电<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; criteria.setPowerRequirement(Criteria.POWER_MEDIUM);<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //设置对速度变化是不是敏感<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; criteria.setSpeedRequired(true);<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //设置在定位时，是不是允许与运营商交换数据的开销<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; criteria.setCostAllowed(true);<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //这个方法是用来得到最好的定位方式的，它有两个参数，一个是Criteria(类似于Map集合)，就是一些条件，比如说对加速度敏感啊，什么海拔敏感这些的<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第二个参数就是，如果我们置为false，那么我们得到的也有可能是已经关掉了的设备，如果是true那么，就只会得到已经打开了的设备<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return locationManager.getBestProvider(criteria, true);<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; //做成单例模式<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; private synchronized MyLocationListener getListener()<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(listener == null)<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; listener = new MyLocationListener();<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return listener;<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; //=========================================================================<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; private class MyLocationListener implements LocationListener<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial"><br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; @Override<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; public void onLocationChanged(Location location)<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //手机位置发生改变时调用的方法<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; String latitude = "纬度：" + location.getLatitude();//纬度<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; String longitude = "经度：" + location.getLongitude();//经度<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SharedPreferences sp = context.getSharedPreferences("config", Context.MODE_PRIVATE);<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Editor editor = sp.edit();<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; editor.putString("lastLocation", latitude + " - " + longitude);<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; editor.commit();<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial"><br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; @Override<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; public void onStatusChanged(String provider, int status, Bundle extras)<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //定位设备的状态发生改变的时候调用的方法，比如说用户把设备打开，或关闭，第二个参数就是设备的状态啦<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial"><br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; @Override<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; public void onProviderEnabled(String provider)<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //设备打开的时候调用的方法<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial"><br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; @Override<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; public void onProviderDisabled(String provider)<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //设备关闭的时候调用的方法<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+</font></font></li><li><font color="#333333"><font face="Arial">&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</font></font></li><li><font color="#333333"><font face="Arial"><br>
+</font></font></li><li><font color="#333333"><font face="Arial">}</font></font></li></ol></div><font color="#333333"><font face="Arial"><em onclick="copycode($(&#39;code_ix2&#39;));">复制代码</em></font></font></div><font color="#333333"><font face="Arial">然后呢，我们就要开启一个广播接收者啦，一但拦截到我们发的短信，那么就进行指令的分析还有相应的处理<br>
+所以我们新建一个广播接收者com.xiaobin.security.receiver.SmsReceiver<div class="blockcode"><div id="code_esG"><ol><li>package com.xiaobin.security.receiver;<br>
+</li><li><br>
+</li><li>import com.xiaobin.security.engine.GPSInfoProvider;<br>
+</li><li><br>
+</li><li>import android.content.BroadcastReceiver;<br>
+</li><li>import android.content.Context;<br>
+</li><li>import android.content.Intent;<br>
+</li><li>import android.telephony.SmsManager;<br>
+</li><li>import android.telephony.SmsMessage;<br>
+</li><li><br>
+</li><li>public class SmsReceiver extends BroadcastReceiver<br>
+</li><li>{<br>
+</li><li><br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; @Override<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; public void onReceive(Context context, Intent intent)<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Object[] pdus = (Object[]) intent.getExtras().get("pdus");<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for(Object pdu : pdus)<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SmsMessage smsMessage = SmsMessage.createFromPdu((byte[]) pdu);<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //拿到短信内容<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; String content = smsMessage.getMessageBody();<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //拿到发送人的电话号码<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; String sender = smsMessage.getOriginatingAddress();<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //这个是通过短信发送指令，然后进行一些操作的<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(content.equals("#*location*#"))<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; abortBroadcast();//终止广播，免得让小偷看到短信<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; GPSInfoProvider gpsInfoProvider = GPSInfoProvider.getInstance(context);<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; String location = gpsInfoProvider.getLocation();<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(location);<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(!location.equals(""))<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //发送短信<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SmsManager smsManager = SmsManager.getDefault();<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; smsManager.sendTextMessage(sender, null, location, null, null);<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</li><li>&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+</li><li><br>
+</li><li>}</li></ol></div><em onclick="copycode($(&#39;code_esG&#39;));">复制代码</em></div>上面获取短信的代码可能大家有点疑问了，为什么会是pdus，这个的话，我们就可以下载一下Android自己写好了的短信管理器的代码啦，我们可以下载一下它的源码来看一下，<font color="#2200"><a href="http://blog.csdn.net/u011485531/article/details/11103867" target="_blank">Android源码下载</a></font>的方法我们之前说过的啦！去看一下，就可以知道为什么的啦。大家可以搜一下sms就可以找到的啦，然后下来来看看吧。好啦，从上面的代码也可以看到，我们拿到了那条指令短信，然后，就获取位置，然后再发回给我们的手机，而且也把广播终止啦，这样，小偷就不会知道我们把短信发送到手机上啦，这样我们就可以瞒过小偷，进行一些操作啦，我们还可以定义多一些指令，比如说，删除东西的指令啦，格式化的指令啦，乱发东西的指令啦，都可以的，我们看一下有没有空，尽量写多一些功能!好啦，现在广播接收者就写好啦，我们也要在AndroidMainfest里面注册它啦<div class="blockcode"><div id="code_WFT"><ol><li>&lt;receiver <br>
+</li><li>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;android:name="com.xiaobin.security.receiver.SmsReceiver"&gt;<br>
+</li><li>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&lt;intent-filter android:priority="1000"&gt;<br>
+</li><li>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;action android:name="android.provider.Telephony.SMS_RECEIVED" /&gt;<br>
+</li><li>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&lt;/intent-filter&gt;<br>
+</li><li>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;/receiver&gt;</li></ol></div><em onclick="copycode($(&#39;code_WFT&#39;));">复制代码</em></div>还要加入相应的权限呢<div class="blockcode"><div id="code_ZFY"><ol><li>&nbsp; &nbsp; &lt;uses-permission android:name="android.permission.RECEIVE_SMS"/&gt;<br>
+</li><li>&nbsp; &nbsp; &lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/&gt;<br>
+</li><li>&nbsp; &nbsp; &lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;<br>
+</li><li>&nbsp; &nbsp; &lt;!-- 这个是用模拟器进行测试才需要用到的权限，表示是这个模拟的位置 --&gt;<br>
+</li><li>&nbsp; &nbsp; &lt;uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/&gt;</li></ol></div><em onclick="copycode($(&#39;code_ZFY&#39;));">复制代码</em></div>注意，模拟器2.3的Android版本的gps是有问题的，所以如果用模拟器测试的话，那么你就不要用2.3的模拟器啦<br>
+ <br>
+好啦，再说一点，我们拿到的是手机的经度可纬度，只要我们在谷歌地图那里查一下，就可以得到在那里的啦，我们明天就会继续完善我们的指令的，加入锁屏还有恢复到出厂模式，和播放报警音乐！<br>
+<br>
+<br>
+<br>
+<br>
+好啦，今天就讲到这里，下一次，我们再继续<br>
+<br>
+
+<ignore_js_op>
+
+<img src="./b_files/rar.gif" border="0" class="vm" alt="">
+<span style="white-space: nowrap" id="attach_121804" onmouseover="showMenu({&#39;ctrlid&#39;:this.id,&#39;pos&#39;:&#39;12&#39;})">
+
+<a href="http://www.apkbus.com/forum.php?mod=attachment&aid=MTIxODA0fGYzZTdkZGQzfDEzOTY2MjM5Mjd8MTcyMjY4fDE0MzE0NA%3D%3D" target="_blank">Security_10GPS定位与发送短信指令 (1).rar</a>
+
+<em class="xg1">(1.61 MB, 下载次数: 891)</em>
+</span>
+<div class="tip tip_4" id="attach_121804_menu" style="position: absolute; display: none" disautofocus="true">
+<div class="tip_c xs0">
+<div class="y">2013-10-9 15:41 上传</div>
+点击文件名下载附件
+<br>下载积分: 下载豆 -2 
+</div>
+<div class="tip_horn"></div>
+</div>
+
+</ignore_js_op>
+<br>
+<br>
+<br>
+</font></font><p></p><br>
+ </td></tr></tbody></table>
+
+<div class="ptg mbm mtn">
+<a title="Android" href="http://www.apkbus.com/misc.php?mod=tag&id=7" target="_blank">Android</a>, <a title="手机卫士" href="http://www.apkbus.com/misc.php?mod=tag&id=5466" target="_blank">手机卫士</a>, <a title="短信" href="http://www.apkbus.com/misc.php?mod=tag&id=226" target="_blank">短信</a>, <a title="项目" href="http://www.apkbus.com/misc.php?mod=tag&id=125" target="_blank">项目</a></div>
+
+</div>
+<div id="comment_1660165" class="cm">
+</div>
+
+<h3 class="psth xs1"><span class="icon_ring vm"></span>评分</h3>
+<dl id="ratelog_1660165" class="rate">
+<dt>
+<strong><a href="http://www.apkbus.com/forum.php?mod=misc&action=viewratings&tid=143144&pid=1660165" onclick="showWindow(&#39;viewratings&#39;, this.href)" title="已有1人评分, 查看全部评分">1</a></strong>
+<p><a href="http://www.apkbus.com/forum.php?mod=misc&action=viewratings&tid=143144&pid=1660165" onclick="showWindow(&#39;viewratings&#39;, this.href)">查看全部评分</a></p>
+</dt>
+<dd>
+<div id="post_rate_1660165"></div>
+<ul class="cl"><li>
+<p id="rate_1660165_299257" onmouseover="showTip(this)" tip="&lt;strong&gt;谢谢你为安卓巴士做出的贡献！.&lt;/strong&gt; &lt;em class=&#39;xi1&#39;&gt;下载豆 + 1 &lt;/em&gt;
+" class="mtn mbn"><a href="http://www.apkbus.com/home.php?mod=space&uid=299257" target="_blank" class="avt"><img src="./b_files/avatar(2).php"></a></p>
+<p><a href="http://www.apkbus.com/home.php?mod=space&uid=299257" target="_blank">gotoorder</a></p>
+</li>
+</ul>
+</dd>
+</dl>
+
+<div id="relate_subject" style="display:none"></div>
+<script type="text/javascript">var auc_list_tmp = $('auc_list_tmp');if(auc_list_tmp !== null){document.write(auc_list_tmp.innerHTML);auc_list_tmp.innerHTML='';}
+function lalala(){
+	ajaxget('plugin.php?id=auction:involve&operation=view&tid=143144&page=1', 'list_ajax');
+	$('list_ajax').style.display = 'block';
+}
+if($('list_ajax')){setTimeout('lalala()', 1000);}
+</script></div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+<div id="p_btn" class="mtw mbm hm cl">
+<div class="tshare cl">
+<b>分享到:&nbsp;</b>
+
+
+<a href="http://www.apkbus.com/home.php?mod=spacecp&ac=plugin&id=qqconnect:spacecp&pluginop=share&sh_type=4&thread_id=143144" id="k_share_to_qq" title="QQ好友和群" target="_blank"><i><img src="./b_files/qq_share.png" alt="QQ好友和群">QQ好友和群</i></a>
+<a href="javascript:void(0);" id="k_qqshare" onclick="postToQzone();" title="QQ空间"><i><img src="./b_files/qzone.gif" alt="QQ空间">QQ空间</i></a>
+<a href="javascript:void(0)" onclick="postToWb();" id="k_weiboshare" title="腾讯微博"><i><img src="./b_files/weibo.png" alt="腾讯微博">腾讯微博</i></a>
+<a href="javascript:void(0);" onclick="postToPengyou();" id="k_pengyoushare" title="腾讯朋友"><i><img src="./b_files/pengyou.png" alt="腾讯朋友">腾讯朋友</i></a>
+<script type="text/javascript">
+function postToWb(){
+var _t = encodeURI(document.title);
+var _url = encodeURIComponent(document.location);
+var _appkey = encodeURI("801077780 ");
+var _pic = "";
+var _site = encodeURIComponent("Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户");
+var _from = 'discuz';
+var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title='+_t+'&from='+_from;
+window.open( _u,'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+}
+function postToPengyou(){
+var _url = encodeURIComponent(document.location.href);
+var _site = encodeURIComponent("Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户");
+var _title = encodeURIComponent("Android项目实战--手机卫士10--GPS定位与发送短信指令");
+var _pics = "";
+var _from = 'discuz';
+var _u = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?to=pengyou&url='+_url+'&site='+_site+'&title='+_title+'&pics='+_pics+'&from='+_from;
+window.open(_u);
+}
+</script>
+	
+
+</div>
+
+<a href="http://www.apkbus.com/home.php?mod=spacecp&ac=favorite&type=thread&id=143144&formhash=21a9e52b" id="k_favorite" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);" onmouseover="this.title = $(&#39;favoritenumber&#39;).innerHTML + &#39; 人收藏&#39;" title="收藏本帖"><i><img src="./b_files/fav.gif" alt="收藏">收藏<span id="favoritenumber">8</span></i></a>
+<a href="javascript:;" id="ak_rate" onclick="showWindow(&#39;rate&#39;, &#39;forum.php?mod=misc&amp;action=rate&amp;tid=143144&amp;pid=1660165&#39;, &#39;get&#39;, -1);return false;" title="评分表立场"><i><img src="./b_files/agree.gif" alt="评分">评分</i></a>
+<a class="sharep" href="http://www.apkbus.com/home.php?mod=spacecp&ac=share&type=thread&id=143144" onclick="showWindow(&#39;sharethread&#39;, this.href, &#39;get&#39;, 0);" title="分享推精华"><i><img src="./b_files/oshr.png" alt="分享">分享</i></a>
+<a href="http://www.apkbus.com/forum.php?mod=collection&action=edit&op=addthread&tid=143144" id="k_collect" onclick="showWindow(this.id, this.href);return false;" onmouseover="this.title = $(&#39;collectionnumber&#39;).innerHTML + &#39; 人淘帖&#39;" title="淘好帖进专辑"><i><img src="./b_files/collection.png" alt="分享">淘帖<span id="collectionnumber" style="display:none">0</span></i></a>
+<a id="recommend_add" href="http://www.apkbus.com/forum.php?mod=misc&action=recommend&do=add&tid=143144&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;recommendupdate(1)&#39;);return false;" onmouseover="this.title = $(&#39;recommendv_add&#39;).innerHTML + &#39; 人支持&#39;" title="顶一下"><i><img src="./b_files/rec_add.gif" alt="支持">支持<span id="recommendv_add">2</span></i></a>
+<a id="recommend_subtract" href="http://www.apkbus.com/forum.php?mod=misc&action=recommend&do=subtract&tid=143144&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;recommendupdate(-1)&#39;);return false;" onmouseover="this.title = $(&#39;recommendv_subtract&#39;).innerHTML + &#39; 人反对&#39;" title="踩一下"><i><img src="./b_files/rec_subtract.gif" alt="反对">反对<span id="recommendv_subtract">1</span></i></a>
+
+<style>
+.cross{padding:20px;}
+.cross h2{font-size:24px;margin-bottom: 20px;}
+.cross p{font-size:12px;color:#444;}
+.txt-blue{color:#0071bc;}
+</style>
+<a href="http://www.apkbus.com/api/mobile?oem=1&module=pushtomobile&tid=143144&formhash=21a9e52b" id="k_mobileoempush" onclick="showWindow(this.id, this.href);return false;" title="发送到手机"><i><img src="./b_files/push.png" alt="发送到手机">穿越</i></a>
+</div>
+<div class="mtw mbw">
+<h3 class="pbm mbm bbda">相关帖子</h3>
+<ul class="xl xl2 cl"><li>• <a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=166855" title="分享一个文件管理器的项目视频，还可以不错的。" target="_blank">分享一个文件管理器的项目视频，还可以不错的。</a></li>
+<li>• <a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=166857" title="android 创建桌面快捷方式" target="_blank">android 创建桌面快捷方式</a></li>
+<li>• <a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=166862" title="android开发-webview开发" target="_blank">android开发-webview开发</a></li>
+<li>• <a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=166863" title="NoClassDefFoundError:com.nostra13.universalimageloader" target="_blank">NoClassDefFoundError:com.nostra13.universalimageloader</a></li>
+<li>• <a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=166864" title="【重庆.财富中心】诚聘Android高级开发工程师" target="_blank">【重庆.财富中心】诚聘Android高级开发工程师</a></li>
+<li>• <a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=166866" title="专业承接各种Android项目外包业务" target="_blank">专业承接各种Android项目外包业务</a></li>
+<li>• <a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=166871" title="将activity作为dialog的样式android:theme=&quot;@style/MyDialogStyleBottom&quot;" target="_blank">将activity作为dialog的样式android:theme="@style/MyDialogStyleBottom"</a></li>
+<li>• <a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=166879" title="问题仍未解决！自己用cxf发布的webservice，android客户端调用问题" target="_blank">问题仍未解决！自己用cxf发布的webservice，android客户端调用问题</a></li>
+<li>• <a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=166887" title="求代码" target="_blank">求代码</a></li>
+</ul>
+</div>
+<div class="a_pb"><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=166052" target="_blank"><span style="color: rgb(68, 68, 68); font-family: &#39;Microsoft Yahei&#39;, Hei, Tahoma, SimHei, sans-serif; font-size: 16px; font-weight: bold; white-space: normal; background-color: rgb(255, 255, 255);">带新人很郁闷也很内疚</span></a></div></td>
+</tr>
+<tr id="_postposition1660165"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="cmmnt" href="http://www.apkbus.com/forum.php?mod=misc&action=comment&tid=143144&pid=1660165&extra=page%3D1&page=1" onclick="showWindow(&#39;comment&#39;, this.href, &#39;get&#39;, 0)">点评</a><a class="fastre" href="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144&reppost=1660165&extra=page%3D1&page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" id="mgc_post_1660165" onmouseover="showMenu(this.id)" class="showmenu">使用道具</a>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport1660165&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=1660165&amp;tid=143144&amp;fid=43&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+<ul id="mgc_post_1660165_menu" class="p_pop mgcmn" style="display: none;">
+<li><a href="http://www.apkbus.com/home.php?mod=magic&mid=namepost&idtype=pid&id=1660165:143144" id="a_namepost_1660165" onclick="showWindow(this.id, this.href)"><img src="./b_files/namepost.small.gif">显身卡</a></li><li>
+</li></ul>
+<script type="text/javascript" reload="1">checkmgcmn('post_1660165')</script>
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_1661578"><table id="pid1661578" class="plhin" summary="pid1661578" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar1661578" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="http://www.apkbus.com/home.php?mod=space&uid=318271" target="_blank" class="xw1">pgdoryoku</a><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=profile&op=verify&vid=6" target="_blank"><img src="./b_files/favicon.ico" class="vm" alt="实名认证" title="实名认证"></a>
+
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo1661578" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo1661578_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="http://www.apkbus.com/home.php?mod=space&uid=318271" target="_blank" class="xi2">pgdoryoku</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=318271&do=profile" target="_blank" class="xi2">554</a></dd>
+</dl><div class="imicn">
+<a href="http://wpa.qq.com/msgrd?V=3&Uin=21365629&Site=Android%E5%BC%80%E5%8F%91%E8%AE%BA%E5%9D%9B%20-%20%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E8%AE%BA%E5%9D%9B%20-%20Android%E5%BC%80%E5%8F%91%20-%20%E5%AE%89%E5%8D%93%E8%AE%BA%E5%9D%9B%20-%20%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91%E9%97%A8%E6%88%B7&Menu=yes&from=discuz" target="_blank" title="QQ"><img src="./b_files/qq.gif" alt="QQ"></a><a href="http://www.apkbus.com/home.php?mod=space&uid=318271&do=profile" target="_blank" title="查看详细资料"><img src="./b_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo1661578&#39;)"><a href="http://www.apkbus.com/home.php?mod=space&uid=318271" class="avtm" target="_blank"><img src="./b_files/avatar(3).php"></a></div>
+</div>
+<div class="qdsmile"><li><center>TA的每日心情</center><table><tbody><tr><th><img src="./b_files/fd.gif"></th><th><font size="5px">奋斗</font><br><span title="2014-4-1 08:13">3&nbsp;天前</span></th></tr></tbody></table></li></div><p>签到天数: 108 天</p><p>连续签到: 1 天</p><p>[LV.6]常住居民II</p><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=318271&do=thread&type=thread&view=me&from=space" class="xi2">1</a></p>主题</th><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=318271&do=thread&type=reply&view=me&from=space" class="xi2">204</a></p>帖子</th><td><p><a href="http://www.apkbus.com/home.php?mod=space&uid=318271&do=profile" class="xi2">554</a></p>积分</td></tr></tbody></table></div>
+<p><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank"><img src="./b_files/common_11_usergroup_icon.png" alt="" class="vm"></a></p>
+<p><em><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank">Android男爵</a></em></p>
+<p class="xg1">安卓入门</p>
+
+<p><span id="g_up1661578" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;});"></span></p>
+<div id="g_up1661578_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 554, 距离下一级还需 446 积分</div></div>
+
+
+<p><span class="pbg2" id="upgradeprogress_1661578" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;, &#39;menuid&#39;:&#39;g_up1661578_menu&#39;});"><span class="pbr2" style="width:44%;"></span></span></p>
+<div id="g_up1661578_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 554, 距离下一级还需 446 积分</div></div>
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=318271&do=profile" target="_blank" class="xi2">554</a></dd>
+</dl>
+
+<dl class="pil cl"><a href="http://wpa.qq.com/msgrd?V=3&Uin=21365629&Site=Android%E5%BC%80%E5%8F%91%E8%AE%BA%E5%9D%9B%20-%20%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E8%AE%BA%E5%9D%9B%20-%20Android%E5%BC%80%E5%8F%91%20-%20%E5%AE%89%E5%8D%93%E8%AE%BA%E5%9D%9B%20-%20%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91%E9%97%A8%E6%88%B7&Menu=yes&from=discuz" target="_blank" title="发起QQ聊天"><img src="./b_files/qq_big.gif" alt="QQ" style="margin:0px;"></a></dl><ul class="xl xl2 o cl">
+<li class="pm2"><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_318271&touid=318271&pmid=0&daterange=2&pid=1661578&tid=143144" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+	
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="http://www.apkbus.com/forum.php?mod=redirect&goto=findpost&ptid=143144&pid=1661578" id="postnum1661578" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+沙发</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon1661578" src="./b_files/online_member.gif">
+<em id="authorposton1661578">发表于 2013-10-9 21:43:31</em>
+<span class="pipe">|</span>
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&page=1&authorid=318271" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="a_pt"><script async="" src="./b_files/adsbygoogle.js"></script>
+<!-- apkbus -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5869528727059635" data-ad-slot="9882699329" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_1661578">
+学习， 感谢楼主分享</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_1661578" class="cm">
+</div>
+
+<div id="post_rate_div_1661578"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+<div class="sign" style="max-height:100px;maxHeightIE:100px;">安卓初学者</div>
+<div class="a_pb"><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=163820" target="_blank"><span style="color: rgb(68, 68, 68); font-family: &#39;Microsoft Yahei&#39;, Hei, Tahoma, SimHei, sans-serif; font-size: 16px; font-weight: bold; white-space: normal; background-color: rgb(255, 255, 255);">感觉被公司老板骗了 你有过类似的经历么？</span></a></div></td>
+</tr>
+<tr id="_postposition1661578"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="cmmnt" href="http://www.apkbus.com/forum.php?mod=misc&action=comment&tid=143144&pid=1661578&extra=page%3D1&page=1" onclick="showWindow(&#39;comment&#39;, this.href, &#39;get&#39;, 0)">点评</a><a class="fastre" href="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144&repquote=1661578&extra=page%3D1&page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+<a class="replyadd" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=support&tid=143144&pid=1661578&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_support_1661578&#39;).innerHTML ? $(&#39;review_support_1661578&#39;).innerHTML : 0) + &#39; 人 支持&#39;">支持 <span id="review_support_1661578"></span></a>
+<a class="replysubtract" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=against&tid=143144&pid=1661578&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_against_1661578&#39;).innerHTML ? $(&#39;review_against_1661578&#39;).innerHTML : 0) + &#39; 人 反对&#39;">反对 <span id="review_against_1661578"></span></a>
+</em>
+
+<p>
+<a href="javascript:;" id="mgc_post_1661578" onmouseover="showMenu(this.id)" class="showmenu">使用道具</a>
+<a href="javascript:;" onclick="showWindow(&#39;rate&#39;, &#39;forum.php?mod=misc&amp;action=rate&amp;tid=143144&amp;pid=1661578&#39;, &#39;get&#39;, -1);return false;">评分</a>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport1661578&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=1661578&amp;tid=143144&amp;fid=43&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+<ul id="mgc_post_1661578_menu" class="p_pop mgcmn" style="display: none;">
+<li><a href="http://www.apkbus.com/home.php?mod=magic&mid=namepost&idtype=pid&id=1661578:143144" id="a_namepost_1661578" onclick="showWindow(this.id, this.href)"><img src="./b_files/namepost.small.gif">显身卡</a></li><li>
+</li></ul>
+<script type="text/javascript" reload="1">checkmgcmn('post_1661578')</script>
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_1663554"><table id="pid1663554" class="plhin" summary="pid1663554" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar1663554" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="http://www.apkbus.com/home.php?mod=space&uid=240598" target="_blank" class="xw1">rchjia</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo1663554" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo1663554_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="http://www.apkbus.com/home.php?mod=space&uid=240598" target="_blank" class="xi2">rchjia</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=240598&do=profile" target="_blank" class="xi2">414</a></dd>
+</dl><div class="imicn">
+<a href="http://www.apkbus.com/home.php?mod=space&uid=240598&do=profile" target="_blank" title="查看详细资料"><img src="./b_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo1663554&#39;)"><a href="http://www.apkbus.com/home.php?mod=space&uid=240598" class="avtm" target="_blank"><img width="120" src="./b_files/140"></a></div>
+</div>
+<p>该用户从未签到</p><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=240598&do=thread&type=thread&view=me&from=space" class="xi2">6</a></p>主题</th><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=240598&do=thread&type=reply&view=me&from=space" class="xi2">64</a></p>帖子</th><td><p><a href="http://www.apkbus.com/home.php?mod=space&uid=240598&do=profile" class="xi2">414</a></p>积分</td></tr></tbody></table></div>
+<p><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank"><img src="./b_files/common_11_usergroup_icon.png" alt="" class="vm"></a></p>
+<p><em><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank">Android男爵</a></em></p>
+
+
+<p><span id="g_up1663554" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;});"></span></p>
+<div id="g_up1663554_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 414, 距离下一级还需 586 积分</div></div>
+
+
+<p><span class="pbg2" id="upgradeprogress_1663554" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;, &#39;menuid&#39;:&#39;g_up1663554_menu&#39;});"><span class="pbr2" style="width:26%;"></span></span></p>
+<div id="g_up1663554_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 414, 距离下一级还需 586 积分</div></div>
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=240598&do=profile" target="_blank" class="xi2">414</a></dd>
+</dl>
+<p class="md_ctrl"><a href="http://www.apkbus.com/home.php?mod=medal"><img id="md_1663554_35" src="./b_files/qqmedal.png" alt="社区QQ达人" title="" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;menuid&#39;:&#39;md_35_menu&#39;, &#39;pos&#39;:&#39;12!&#39;})"></a></p>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="pm2"><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_240598&touid=240598&pmid=0&daterange=2&pid=1663554&tid=143144" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+	
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="http://www.apkbus.com/forum.php?mod=redirect&goto=findpost&ptid=143144&pid=1663554" id="postnum1663554" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+板凳</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon1663554" src="./b_files/online_member.gif">
+<em id="authorposton1663554">发表于 2013-10-10 11:02:16</em>
+<span class="pipe">|</span>
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&page=1&authorid=240598" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="a_pt"><script async="" src="./b_files/adsbygoogle.js"></script>
+<!-- apkbus -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5869528727059635" data-ad-slot="9882699329" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_1663554">
+学习，感谢分享</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_1663554" class="cm">
+</div>
+
+<div id="post_rate_div_1663554"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition1663554"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="cmmnt" href="http://www.apkbus.com/forum.php?mod=misc&action=comment&tid=143144&pid=1663554&extra=page%3D1&page=1" onclick="showWindow(&#39;comment&#39;, this.href, &#39;get&#39;, 0)">点评</a><a class="fastre" href="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144&repquote=1663554&extra=page%3D1&page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+<a class="replyadd" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=support&tid=143144&pid=1663554&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_support_1663554&#39;).innerHTML ? $(&#39;review_support_1663554&#39;).innerHTML : 0) + &#39; 人 支持&#39;">支持 <span id="review_support_1663554"></span></a>
+<a class="replysubtract" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=against&tid=143144&pid=1663554&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_against_1663554&#39;).innerHTML ? $(&#39;review_against_1663554&#39;).innerHTML : 0) + &#39; 人 反对&#39;">反对 <span id="review_against_1663554"></span></a>
+</em>
+
+<p>
+<a href="javascript:;" id="mgc_post_1663554" onmouseover="showMenu(this.id)" class="showmenu">使用道具</a>
+<a href="javascript:;" onclick="showWindow(&#39;rate&#39;, &#39;forum.php?mod=misc&amp;action=rate&amp;tid=143144&amp;pid=1663554&#39;, &#39;get&#39;, -1);return false;">评分</a>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport1663554&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=1663554&amp;tid=143144&amp;fid=43&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+<ul id="mgc_post_1663554_menu" class="p_pop mgcmn" style="display: none;">
+<li><a href="http://www.apkbus.com/home.php?mod=magic&mid=namepost&idtype=pid&id=1663554:143144" id="a_namepost_1663554" onclick="showWindow(this.id, this.href)"><img src="./b_files/namepost.small.gif">显身卡</a></li><li>
+</li></ul>
+<script type="text/javascript" reload="1">checkmgcmn('post_1663554')</script>
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_1676502"><table id="pid1676502" class="plhin" summary="pid1676502" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar1676502" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="http://www.apkbus.com/home.php?mod=space&uid=177928" target="_blank" class="xw1">tanyz</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo1676502" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo1676502_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="http://www.apkbus.com/home.php?mod=space&uid=177928" target="_blank" class="xi2">tanyz</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=177928&do=profile" target="_blank" class="xi2">543</a></dd>
+</dl><div class="imicn">
+<a href="http://www.apkbus.com/home.php?mod=space&uid=177928&do=profile" target="_blank" title="查看详细资料"><img src="./b_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo1676502&#39;)"><a href="http://www.apkbus.com/home.php?mod=space&uid=177928" class="avtm" target="_blank"><img src="./b_files/avatar(4).php"></a></div>
+</div>
+<p>该用户从未签到</p><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=177928&do=thread&type=thread&view=me&from=space" class="xi2">0</a></p>主题</th><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=177928&do=thread&type=reply&view=me&from=space" class="xi2">233</a></p>帖子</th><td><p><a href="http://www.apkbus.com/home.php?mod=space&uid=177928&do=profile" class="xi2">543</a></p>积分</td></tr></tbody></table></div>
+<p><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank"><img src="./b_files/common_11_usergroup_icon.png" alt="" class="vm"></a></p>
+<p><em><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank">Android男爵</a></em></p>
+
+
+<p><span id="g_up1676502" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;});"></span></p>
+<div id="g_up1676502_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 543, 距离下一级还需 457 积分</div></div>
+
+
+<p><span class="pbg2" id="upgradeprogress_1676502" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;, &#39;menuid&#39;:&#39;g_up1676502_menu&#39;});"><span class="pbr2" style="width:42%;"></span></span></p>
+<div id="g_up1676502_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 543, 距离下一级还需 457 积分</div></div>
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=177928&do=profile" target="_blank" class="xi2">543</a></dd>
+</dl>
+<p class="md_ctrl"><a href="http://www.apkbus.com/home.php?mod=medal"><img id="md_1676502_35" src="./b_files/qqmedal.png" alt="社区QQ达人" title="" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;menuid&#39;:&#39;md_35_menu&#39;, &#39;pos&#39;:&#39;12!&#39;})"></a></p>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="pm2"><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_177928&touid=177928&pmid=0&daterange=2&pid=1676502&tid=143144" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+	
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="http://www.apkbus.com/forum.php?mod=redirect&goto=findpost&ptid=143144&pid=1676502" id="postnum1676502" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+地板</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon1676502" src="./b_files/online_member.gif">
+<em id="authorposton1676502">发表于 2013-10-13 09:57:05</em>
+<span class="pipe">|</span>
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&page=1&authorid=177928" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_1676502">
+1111111111111111111</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_1676502" class="cm">
+</div>
+
+<div id="post_rate_div_1676502"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition1676502"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="cmmnt" href="http://www.apkbus.com/forum.php?mod=misc&action=comment&tid=143144&pid=1676502&extra=page%3D1&page=1" onclick="showWindow(&#39;comment&#39;, this.href, &#39;get&#39;, 0)">点评</a><a class="fastre" href="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144&repquote=1676502&extra=page%3D1&page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+<a class="replyadd" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=support&tid=143144&pid=1676502&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_support_1676502&#39;).innerHTML ? $(&#39;review_support_1676502&#39;).innerHTML : 0) + &#39; 人 支持&#39;">支持 <span id="review_support_1676502"></span></a>
+<a class="replysubtract" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=against&tid=143144&pid=1676502&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_against_1676502&#39;).innerHTML ? $(&#39;review_against_1676502&#39;).innerHTML : 0) + &#39; 人 反对&#39;">反对 <span id="review_against_1676502"></span></a>
+</em>
+
+<p>
+<a href="javascript:;" id="mgc_post_1676502" onmouseover="showMenu(this.id)" class="showmenu">使用道具</a>
+<a href="javascript:;" onclick="showWindow(&#39;rate&#39;, &#39;forum.php?mod=misc&amp;action=rate&amp;tid=143144&amp;pid=1676502&#39;, &#39;get&#39;, -1);return false;">评分</a>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport1676502&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=1676502&amp;tid=143144&amp;fid=43&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+<ul id="mgc_post_1676502_menu" class="p_pop mgcmn" style="display: none;">
+<li><a href="http://www.apkbus.com/home.php?mod=magic&mid=namepost&idtype=pid&id=1676502:143144" id="a_namepost_1676502" onclick="showWindow(this.id, this.href)"><img src="./b_files/namepost.small.gif">显身卡</a></li><li>
+</li></ul>
+<script type="text/javascript" reload="1">checkmgcmn('post_1676502')</script>
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_1686927"><table id="pid1686927" class="plhin" summary="pid1686927" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar1686927" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="http://www.apkbus.com/home.php?mod=space&uid=148997" target="_blank" class="xw1">alfredq</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo1686927" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo1686927_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="http://www.apkbus.com/home.php?mod=space&uid=148997" target="_blank" class="xi2">alfredq</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=148997&do=profile" target="_blank" class="xi2">326</a></dd>
+</dl><div class="imicn">
+<a href="http://www.apkbus.com/home.php?mod=space&uid=148997&do=profile" target="_blank" title="查看详细资料"><img src="./b_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo1686927&#39;)"><a href="http://www.apkbus.com/home.php?mod=space&uid=148997" class="avtm" target="_blank"><img src="./b_files/avatar(5).php"></a></div>
+</div>
+<div class="qdsmile"><li><center>TA的每日心情</center><table><tbody><tr><th><img src="./b_files/kx.gif"></th><th><font size="5px">开心</font><br>2013-1-15 11:21</th></tr></tbody></table></li></div><p>签到天数: 1 天</p><p>连续签到: 1 天</p><p>[LV.1]初来乍到</p><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=148997&do=thread&type=thread&view=me&from=space" class="xi2">2</a></p>主题</th><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=148997&do=thread&type=reply&view=me&from=space" class="xi2">26</a></p>帖子</th><td><p><a href="http://www.apkbus.com/home.php?mod=space&uid=148997&do=profile" class="xi2">326</a></p>积分</td></tr></tbody></table></div>
+<p><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank"><img src="./b_files/common_11_usergroup_icon.png" alt="" class="vm"></a></p>
+<p><em><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank">Android男爵</a></em></p>
+
+
+<p><span id="g_up1686927" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;});"></span></p>
+<div id="g_up1686927_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 326, 距离下一级还需 674 积分</div></div>
+
+
+<p><span class="pbg2" id="upgradeprogress_1686927" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;, &#39;menuid&#39;:&#39;g_up1686927_menu&#39;});"><span class="pbr2" style="width:15%;"></span></span></p>
+<div id="g_up1686927_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 326, 距离下一级还需 674 积分</div></div>
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=148997&do=profile" target="_blank" class="xi2">326</a></dd>
+</dl>
+
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="pm2"><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_148997&touid=148997&pmid=0&daterange=2&pid=1686927&tid=143144" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+	
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="http://www.apkbus.com/forum.php?mod=redirect&goto=findpost&ptid=143144&pid=1686927" id="postnum1686927" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>5</em><sup>#</sup></a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon1686927" src="./b_files/online_member.gif">
+<em id="authorposton1686927">发表于 2013-10-15 16:54:08</em>
+<span class="pipe">|</span>
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&page=1&authorid=148997" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_1686927">
+看看效果怎么样</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_1686927" class="cm">
+</div>
+
+<div id="post_rate_div_1686927"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition1686927"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="cmmnt" href="http://www.apkbus.com/forum.php?mod=misc&action=comment&tid=143144&pid=1686927&extra=page%3D1&page=1" onclick="showWindow(&#39;comment&#39;, this.href, &#39;get&#39;, 0)">点评</a><a class="fastre" href="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144&repquote=1686927&extra=page%3D1&page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+<a class="replyadd" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=support&tid=143144&pid=1686927&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_support_1686927&#39;).innerHTML ? $(&#39;review_support_1686927&#39;).innerHTML : 0) + &#39; 人 支持&#39;">支持 <span id="review_support_1686927"></span></a>
+<a class="replysubtract" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=against&tid=143144&pid=1686927&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_against_1686927&#39;).innerHTML ? $(&#39;review_against_1686927&#39;).innerHTML : 0) + &#39; 人 反对&#39;">反对 <span id="review_against_1686927"></span></a>
+</em>
+
+<p>
+<a href="javascript:;" id="mgc_post_1686927" onmouseover="showMenu(this.id)" class="showmenu">使用道具</a>
+<a href="javascript:;" onclick="showWindow(&#39;rate&#39;, &#39;forum.php?mod=misc&amp;action=rate&amp;tid=143144&amp;pid=1686927&#39;, &#39;get&#39;, -1);return false;">评分</a>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport1686927&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=1686927&amp;tid=143144&amp;fid=43&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+<ul id="mgc_post_1686927_menu" class="p_pop mgcmn" style="display: none;">
+<li><a href="http://www.apkbus.com/home.php?mod=magic&mid=namepost&idtype=pid&id=1686927:143144" id="a_namepost_1686927" onclick="showWindow(this.id, this.href)"><img src="./b_files/namepost.small.gif">显身卡</a></li><li>
+</li></ul>
+<script type="text/javascript" reload="1">checkmgcmn('post_1686927')</script>
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_1725683"><table id="pid1725683" class="plhin" summary="pid1725683" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar1725683" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="http://www.apkbus.com/home.php?mod=space&uid=134413" target="_blank" class="xw1">江河湖海</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo1725683" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo1725683_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="http://www.apkbus.com/home.php?mod=space&uid=134413" target="_blank" class="xi2">江河湖海</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=134413&do=profile" target="_blank" class="xi2">294</a></dd>
+</dl><div class="imicn">
+<a href="http://www.apkbus.com/home.php?mod=space&uid=134413&do=profile" target="_blank" title="查看详细资料"><img src="./b_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo1725683&#39;)"><a href="http://www.apkbus.com/home.php?mod=space&uid=134413" class="avtm" target="_blank"><img src="./b_files/avatar(6).php"></a></div>
+</div>
+<div class="qdsmile"><li><center>TA的每日心情</center><table><tbody><tr><th><img src="./b_files/ym.gif"></th><th><font size="5px">郁闷</font><br>2014-2-8 16:44</th></tr></tbody></table></li></div><p>签到天数: 49 天</p><p>连续签到: 2 天</p><p>[LV.5]常住居民I</p><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=134413&do=thread&type=thread&view=me&from=space" class="xi2">0</a></p>主题</th><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=134413&do=thread&type=reply&view=me&from=space" class="xi2">74</a></p>帖子</th><td><p><a href="http://www.apkbus.com/home.php?mod=space&uid=134413&do=profile" class="xi2">294</a></p>积分</td></tr></tbody></table></div>
+<p><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank"><img src="./b_files/common_11_usergroup_icon.png" alt="" class="vm"></a></p>
+<p><em><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank">Android男爵</a></em></p>
+
+
+<p><span id="g_up1725683" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;});"></span></p>
+<div id="g_up1725683_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 294, 距离下一级还需 706 积分</div></div>
+
+
+<p><span class="pbg2" id="upgradeprogress_1725683" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;, &#39;menuid&#39;:&#39;g_up1725683_menu&#39;});"><span class="pbr2" style="width:11%;"></span></span></p>
+<div id="g_up1725683_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 294, 距离下一级还需 706 积分</div></div>
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=134413&do=profile" target="_blank" class="xi2">294</a></dd>
+</dl>
+<p class="md_ctrl"><a href="http://www.apkbus.com/home.php?mod=medal"><img id="md_1725683_35" src="./b_files/qqmedal.png" alt="社区QQ达人" title="" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;menuid&#39;:&#39;md_35_menu&#39;, &#39;pos&#39;:&#39;12!&#39;})"></a></p>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="pm2"><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_134413&touid=134413&pmid=0&daterange=2&pid=1725683&tid=143144" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+	
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="http://www.apkbus.com/forum.php?mod=redirect&goto=findpost&ptid=143144&pid=1725683" id="postnum1725683" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>6</em><sup>#</sup></a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon1725683" src="./b_files/online_member.gif">
+<em id="authorposton1725683">发表于 2013-10-24 10:55:59</em>
+<span class="pipe">|</span>
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&page=1&authorid=134413" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_1725683">
+努力学习中！！</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_1725683" class="cm">
+</div>
+
+<div id="post_rate_div_1725683"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition1725683"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="cmmnt" href="http://www.apkbus.com/forum.php?mod=misc&action=comment&tid=143144&pid=1725683&extra=page%3D1&page=1" onclick="showWindow(&#39;comment&#39;, this.href, &#39;get&#39;, 0)">点评</a><a class="fastre" href="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144&repquote=1725683&extra=page%3D1&page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+<a class="replyadd" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=support&tid=143144&pid=1725683&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_support_1725683&#39;).innerHTML ? $(&#39;review_support_1725683&#39;).innerHTML : 0) + &#39; 人 支持&#39;">支持 <span id="review_support_1725683"></span></a>
+<a class="replysubtract" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=against&tid=143144&pid=1725683&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_against_1725683&#39;).innerHTML ? $(&#39;review_against_1725683&#39;).innerHTML : 0) + &#39; 人 反对&#39;">反对 <span id="review_against_1725683"></span></a>
+</em>
+
+<p>
+<a href="javascript:;" id="mgc_post_1725683" onmouseover="showMenu(this.id)" class="showmenu">使用道具</a>
+<a href="javascript:;" onclick="showWindow(&#39;rate&#39;, &#39;forum.php?mod=misc&amp;action=rate&amp;tid=143144&amp;pid=1725683&#39;, &#39;get&#39;, -1);return false;">评分</a>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport1725683&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=1725683&amp;tid=143144&amp;fid=43&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+<ul id="mgc_post_1725683_menu" class="p_pop mgcmn" style="display: none;">
+<li><a href="http://www.apkbus.com/home.php?mod=magic&mid=namepost&idtype=pid&id=1725683:143144" id="a_namepost_1725683" onclick="showWindow(this.id, this.href)"><img src="./b_files/namepost.small.gif">显身卡</a></li><li>
+</li></ul>
+<script type="text/javascript" reload="1">checkmgcmn('post_1725683')</script>
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_1732878" style="display:none;"><table id="pid1732878" class="plhin" summary="pid1732878" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar1732878" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="http://www.apkbus.com/home.php?mod=space&uid=244064" target="_blank" class="xw1">bingstones</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo1732878" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo1732878_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="http://www.apkbus.com/home.php?mod=space&uid=244064" target="_blank" class="xi2">bingstones</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=244064&do=profile" target="_blank" class="xi2">449</a></dd>
+</dl><div class="imicn">
+<a href="http://www.apkbus.com/home.php?mod=space&uid=244064&do=profile" target="_blank" title="查看详细资料"><img src="./b_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo1732878&#39;)"><a href="http://www.apkbus.com/home.php?mod=space&uid=244064" class="avtm" target="_blank"><img width="120" src="./b_files/140(1)"></a></div>
+</div>
+<div class="qdsmile"><li><center>TA的每日心情</center><table><tbody><tr><th><img src="./b_files/ym.gif"></th><th><font size="5px">郁闷</font><br><span title="2014-4-2 22:39">前天&nbsp;22:39</span></th></tr></tbody></table></li></div><p>签到天数: 19 天</p><p>连续签到: 1 天</p><p>[LV.4]偶尔看看III</p><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=244064&do=thread&type=thread&view=me&from=space" class="xi2">0</a></p>主题</th><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=244064&do=thread&type=reply&view=me&from=space" class="xi2">129</a></p>帖子</th><td><p><a href="http://www.apkbus.com/home.php?mod=space&uid=244064&do=profile" class="xi2">449</a></p>积分</td></tr></tbody></table></div>
+<p><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank"><img src="./b_files/common_11_usergroup_icon.png" alt="" class="vm"></a></p>
+<p><em><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank">Android男爵</a></em></p>
+
+
+<p><span id="g_up1732878" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;});"></span></p>
+<div id="g_up1732878_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 449, 距离下一级还需 551 积分</div></div>
+
+
+<p><span class="pbg2" id="upgradeprogress_1732878" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;, &#39;menuid&#39;:&#39;g_up1732878_menu&#39;});"><span class="pbr2" style="width:31%;"></span></span></p>
+<div id="g_up1732878_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 449, 距离下一级还需 551 积分</div></div>
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=244064&do=profile" target="_blank" class="xi2">449</a></dd>
+</dl>
+<p class="md_ctrl"><a href="http://www.apkbus.com/home.php?mod=medal"><img id="md_1732878_35" src="./b_files/qqmedal.png" alt="社区QQ达人" title="" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;menuid&#39;:&#39;md_35_menu&#39;, &#39;pos&#39;:&#39;12!&#39;})"></a></p>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="pm2"><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_244064&touid=244064&pmid=0&daterange=2&pid=1732878&tid=143144" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+	
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="http://www.apkbus.com/forum.php?mod=redirect&goto=findpost&ptid=143144&pid=1732878" id="postnum1732878" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>7</em><sup>#</sup></a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon1732878" src="./b_files/online_member.gif">
+<em id="authorposton1732878">发表于 2013-10-25 17:13:03</em>
+<span class="pipe">|</span>
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&page=1&authorid=244064" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_1732878">
+学习中。。</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_1732878" class="cm">
+</div>
+
+<div id="post_rate_div_1732878"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition1732878"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="cmmnt" href="http://www.apkbus.com/forum.php?mod=misc&action=comment&tid=143144&pid=1732878&extra=page%3D1&page=1" onclick="showWindow(&#39;comment&#39;, this.href, &#39;get&#39;, 0)">点评</a><a class="fastre" href="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144&repquote=1732878&extra=page%3D1&page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" id="mgc_post_1732878" onmouseover="showMenu(this.id)" class="showmenu">使用道具</a>
+<a href="javascript:;" onclick="showWindow(&#39;rate&#39;, &#39;forum.php?mod=misc&amp;action=rate&amp;tid=143144&amp;pid=1732878&#39;, &#39;get&#39;, -1);return false;">评分</a>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport1732878&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=1732878&amp;tid=143144&amp;fid=43&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+<ul id="mgc_post_1732878_menu" class="p_pop mgcmn" style="display: none;">
+<li><a href="http://www.apkbus.com/home.php?mod=magic&mid=namepost&idtype=pid&id=1732878:143144" id="a_namepost_1732878" onclick="showWindow(this.id, this.href)"><img src="./b_files/namepost.small.gif">显身卡</a></li><li>
+</li></ul>
+<script type="text/javascript" reload="1">checkmgcmn('post_1732878')</script>
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_1732883" style="display:none;"><table id="pid1732883" class="plhin" summary="pid1732883" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar1732883" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="http://www.apkbus.com/home.php?mod=space&uid=244064" target="_blank" class="xw1">bingstones</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo1732883" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo1732883_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="http://www.apkbus.com/home.php?mod=space&uid=244064" target="_blank" class="xi2">bingstones</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=244064&do=profile" target="_blank" class="xi2">449</a></dd>
+</dl><div class="imicn">
+<a href="http://www.apkbus.com/home.php?mod=space&uid=244064&do=profile" target="_blank" title="查看详细资料"><img src="./b_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo1732883&#39;)"><a href="http://www.apkbus.com/home.php?mod=space&uid=244064" class="avtm" target="_blank"><img width="120" src="./b_files/140(1)"></a></div>
+</div>
+<div class="qdsmile"><li><center>TA的每日心情</center><table><tbody><tr><th><img src="./b_files/ym.gif"></th><th><font size="5px">郁闷</font><br><span title="2014-4-2 22:39">前天&nbsp;22:39</span></th></tr></tbody></table></li></div><p>签到天数: 19 天</p><p>连续签到: 1 天</p><p>[LV.4]偶尔看看III</p><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=244064&do=thread&type=thread&view=me&from=space" class="xi2">0</a></p>主题</th><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=244064&do=thread&type=reply&view=me&from=space" class="xi2">129</a></p>帖子</th><td><p><a href="http://www.apkbus.com/home.php?mod=space&uid=244064&do=profile" class="xi2">449</a></p>积分</td></tr></tbody></table></div>
+<p><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank"><img src="./b_files/common_11_usergroup_icon.png" alt="" class="vm"></a></p>
+<p><em><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank">Android男爵</a></em></p>
+
+
+<p><span id="g_up1732883" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;});"></span></p>
+<div id="g_up1732883_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 449, 距离下一级还需 551 积分</div></div>
+
+
+<p><span class="pbg2" id="upgradeprogress_1732883" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;, &#39;menuid&#39;:&#39;g_up1732883_menu&#39;});"><span class="pbr2" style="width:31%;"></span></span></p>
+<div id="g_up1732883_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 449, 距离下一级还需 551 积分</div></div>
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=244064&do=profile" target="_blank" class="xi2">449</a></dd>
+</dl>
+<p class="md_ctrl"><a href="http://www.apkbus.com/home.php?mod=medal"><img id="md_1732883_35" src="./b_files/qqmedal.png" alt="社区QQ达人" title="" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;menuid&#39;:&#39;md_35_menu&#39;, &#39;pos&#39;:&#39;12!&#39;})"></a></p>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="pm2"><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_244064&touid=244064&pmid=0&daterange=2&pid=1732883&tid=143144" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+	
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="http://www.apkbus.com/forum.php?mod=redirect&goto=findpost&ptid=143144&pid=1732883" id="postnum1732883" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>8</em><sup>#</sup></a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon1732883" src="./b_files/online_member.gif">
+<em id="authorposton1732883">发表于 2013-10-25 17:14:23</em>
+<span class="pipe">|</span>
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&page=1&authorid=244064" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_1732883">
+大神啊。<br>
+</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_1732883" class="cm">
+</div>
+
+<div id="post_rate_div_1732883"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition1732883"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="cmmnt" href="http://www.apkbus.com/forum.php?mod=misc&action=comment&tid=143144&pid=1732883&extra=page%3D1&page=1" onclick="showWindow(&#39;comment&#39;, this.href, &#39;get&#39;, 0)">点评</a><a class="fastre" href="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144&repquote=1732883&extra=page%3D1&page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" id="mgc_post_1732883" onmouseover="showMenu(this.id)" class="showmenu">使用道具</a>
+<a href="javascript:;" onclick="showWindow(&#39;rate&#39;, &#39;forum.php?mod=misc&amp;action=rate&amp;tid=143144&amp;pid=1732883&#39;, &#39;get&#39;, -1);return false;">评分</a>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport1732883&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=1732883&amp;tid=143144&amp;fid=43&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+<ul id="mgc_post_1732883_menu" class="p_pop mgcmn" style="display: none;">
+<li><a href="http://www.apkbus.com/home.php?mod=magic&mid=namepost&idtype=pid&id=1732883:143144" id="a_namepost_1732883" onclick="showWindow(this.id, this.href)"><img src="./b_files/namepost.small.gif">显身卡</a></li><li>
+</li></ul>
+<script type="text/javascript" reload="1">checkmgcmn('post_1732883')</script>
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_1747555"><table id="pid1747555" class="plhin" summary="pid1747555" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar1747555" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="http://www.apkbus.com/home.php?mod=space&uid=66697" target="_blank" class="xw1">草儿</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo1747555" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo1747555_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="http://www.apkbus.com/home.php?mod=space&uid=66697" target="_blank" class="xi2">草儿</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=66697&do=profile" target="_blank" class="xi2">306</a></dd>
+</dl><div class="imicn">
+<a href="http://www.apkbus.com/home.php?mod=space&uid=66697&do=profile" target="_blank" title="查看详细资料"><img src="./b_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo1747555&#39;)"><a href="http://www.apkbus.com/home.php?mod=space&uid=66697" class="avtm" target="_blank"><img width="120" src="./b_files/140(2)"></a></div>
+</div>
+<div class="qdsmile"><li><center>TA的每日心情</center><table><tbody><tr><th><img src="./b_files/wl.gif"></th><th><font size="5px">无聊</font><br>2013-3-8 13:37</th></tr></tbody></table></li></div><p>签到天数: 3 天</p><p>连续签到: 1 天</p><p>[LV.2]偶尔看看I</p><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=66697&do=thread&type=thread&view=me&from=space" class="xi2">1</a></p>主题</th><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=66697&do=thread&type=reply&view=me&from=space" class="xi2">66</a></p>帖子</th><td><p><a href="http://www.apkbus.com/home.php?mod=space&uid=66697&do=profile" class="xi2">306</a></p>积分</td></tr></tbody></table></div>
+<p><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank"><img src="./b_files/common_11_usergroup_icon.png" alt="" class="vm"></a></p>
+<p><em><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank">Android男爵</a></em></p>
+
+
+<p><span id="g_up1747555" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;});"></span></p>
+<div id="g_up1747555_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 306, 距离下一级还需 694 积分</div></div>
+
+
+<p><span class="pbg2" id="upgradeprogress_1747555" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;, &#39;menuid&#39;:&#39;g_up1747555_menu&#39;});"><span class="pbr2" style="width:13%;"></span></span></p>
+<div id="g_up1747555_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 306, 距离下一级还需 694 积分</div></div>
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=66697&do=profile" target="_blank" class="xi2">306</a></dd>
+</dl>
+<p class="md_ctrl"><a href="http://www.apkbus.com/home.php?mod=medal"><img id="md_1747555_35" src="./b_files/qqmedal.png" alt="社区QQ达人" title="" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;menuid&#39;:&#39;md_35_menu&#39;, &#39;pos&#39;:&#39;12!&#39;})"></a></p>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="pm2"><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_66697&touid=66697&pmid=0&daterange=2&pid=1747555&tid=143144" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+	
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="http://www.apkbus.com/forum.php?mod=redirect&goto=findpost&ptid=143144&pid=1747555" id="postnum1747555" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>9</em><sup>#</sup></a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon1747555" src="./b_files/online_member.gif">
+<em id="authorposton1747555">发表于 2013-10-29 16:18:13</em>
+<span class="pipe">|</span>
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&page=1&authorid=66697" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_1747555">
+正需要这个东西！拿走了 谢谢楼主</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_1747555" class="cm">
+</div>
+
+<div id="post_rate_div_1747555"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition1747555"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="cmmnt" href="http://www.apkbus.com/forum.php?mod=misc&action=comment&tid=143144&pid=1747555&extra=page%3D1&page=1" onclick="showWindow(&#39;comment&#39;, this.href, &#39;get&#39;, 0)">点评</a><a class="fastre" href="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144&repquote=1747555&extra=page%3D1&page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+<a class="replyadd" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=support&tid=143144&pid=1747555&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_support_1747555&#39;).innerHTML ? $(&#39;review_support_1747555&#39;).innerHTML : 0) + &#39; 人 支持&#39;">支持 <span id="review_support_1747555"></span></a>
+<a class="replysubtract" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=against&tid=143144&pid=1747555&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_against_1747555&#39;).innerHTML ? $(&#39;review_against_1747555&#39;).innerHTML : 0) + &#39; 人 反对&#39;">反对 <span id="review_against_1747555"></span></a>
+</em>
+
+<p>
+<a href="javascript:;" id="mgc_post_1747555" onmouseover="showMenu(this.id)" class="showmenu">使用道具</a>
+<a href="javascript:;" onclick="showWindow(&#39;rate&#39;, &#39;forum.php?mod=misc&amp;action=rate&amp;tid=143144&amp;pid=1747555&#39;, &#39;get&#39;, -1);return false;">评分</a>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport1747555&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=1747555&amp;tid=143144&amp;fid=43&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+<ul id="mgc_post_1747555_menu" class="p_pop mgcmn" style="display: none;">
+<li><a href="http://www.apkbus.com/home.php?mod=magic&mid=namepost&idtype=pid&id=1747555:143144" id="a_namepost_1747555" onclick="showWindow(this.id, this.href)"><img src="./b_files/namepost.small.gif">显身卡</a></li><li>
+</li></ul>
+<script type="text/javascript" reload="1">checkmgcmn('post_1747555')</script>
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_1747572"><table id="pid1747572" class="plhin" summary="pid1747572" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar1747572" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="http://www.apkbus.com/home.php?mod=space&uid=66697" target="_blank" class="xw1">草儿</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo1747572" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo1747572_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="http://www.apkbus.com/home.php?mod=space&uid=66697" target="_blank" class="xi2">草儿</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=66697&do=profile" target="_blank" class="xi2">306</a></dd>
+</dl><div class="imicn">
+<a href="http://www.apkbus.com/home.php?mod=space&uid=66697&do=profile" target="_blank" title="查看详细资料"><img src="./b_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo1747572&#39;)"><a href="http://www.apkbus.com/home.php?mod=space&uid=66697" class="avtm" target="_blank"><img width="120" src="./b_files/140(2)"></a></div>
+</div>
+<div class="qdsmile"><li><center>TA的每日心情</center><table><tbody><tr><th><img src="./b_files/wl.gif"></th><th><font size="5px">无聊</font><br>2013-3-8 13:37</th></tr></tbody></table></li></div><p>签到天数: 3 天</p><p>连续签到: 1 天</p><p>[LV.2]偶尔看看I</p><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=66697&do=thread&type=thread&view=me&from=space" class="xi2">1</a></p>主题</th><th><p><a href="http://www.apkbus.com/home.php?mod=space&uid=66697&do=thread&type=reply&view=me&from=space" class="xi2">66</a></p>帖子</th><td><p><a href="http://www.apkbus.com/home.php?mod=space&uid=66697&do=profile" class="xi2">306</a></p>积分</td></tr></tbody></table></div>
+<p><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank"><img src="./b_files/common_11_usergroup_icon.png" alt="" class="vm"></a></p>
+<p><em><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=usergroup&gid=11" target="_blank">Android男爵</a></em></p>
+
+
+<p><span id="g_up1747572" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;});"></span></p>
+<div id="g_up1747572_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 306, 距离下一级还需 694 积分</div></div>
+
+
+<p><span class="pbg2" id="upgradeprogress_1747572" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;pos&#39;:&#39;12!&#39;, &#39;menuid&#39;:&#39;g_up1747572_menu&#39;});"><span class="pbr2" style="width:13%;"></span></span></p>
+<div id="g_up1747572_menu" class="tip tip_4" style="display: none;"><div class="tip_horn"></div><div class="tip_c">Android男爵, 积分 306, 距离下一级还需 694 积分</div></div>
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="http://www.apkbus.com/home.php?mod=space&uid=66697&do=profile" target="_blank" class="xi2">306</a></dd>
+</dl>
+<p class="md_ctrl"><a href="http://www.apkbus.com/home.php?mod=medal"><img id="md_1747572_35" src="./b_files/qqmedal.png" alt="社区QQ达人" title="" onmouseover="showMenu({&#39;ctrlid&#39;:this.id, &#39;menuid&#39;:&#39;md_35_menu&#39;, &#39;pos&#39;:&#39;12!&#39;})"></a></p>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="pm2"><a href="http://www.apkbus.com/home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_66697&touid=66697&pmid=0&daterange=2&pid=1747572&tid=143144" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+	
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="http://www.apkbus.com/forum.php?mod=redirect&goto=findpost&ptid=143144&pid=1747572" id="postnum1747572" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>10</em><sup>#</sup></a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon1747572" src="./b_files/online_member.gif">
+<em id="authorposton1747572">发表于 2013-10-29 16:21:27</em>
+<span class="pipe">|</span>
+<a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&page=1&authorid=66697" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_1747572">
+附件不能用？</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_1747572" class="cm">
+</div>
+
+<div id="post_rate_div_1747572"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition1747572"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="cmmnt" href="http://www.apkbus.com/forum.php?mod=misc&action=comment&tid=143144&pid=1747572&extra=page%3D1&page=1" onclick="showWindow(&#39;comment&#39;, this.href, &#39;get&#39;, 0)">点评</a><a class="fastre" href="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144&repquote=1747572&extra=page%3D1&page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+<a class="replyadd" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=support&tid=143144&pid=1747572&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_support_1747572&#39;).innerHTML ? $(&#39;review_support_1747572&#39;).innerHTML : 0) + &#39; 人 支持&#39;">支持 <span id="review_support_1747572"></span></a>
+<a class="replysubtract" href="http://www.apkbus.com/forum.php?mod=misc&action=postreview&do=against&tid=143144&pid=1747572&hash=21a9e52b" onclick="ajaxmenu(this, 3000, 1, 0, &#39;43&#39;, &#39;&#39;);return false;" onmouseover="this.title = ($(&#39;review_against_1747572&#39;).innerHTML ? $(&#39;review_against_1747572&#39;).innerHTML : 0) + &#39; 人 反对&#39;">反对 <span id="review_against_1747572"></span></a>
+</em>
+
+<p>
+<a href="javascript:;" id="mgc_post_1747572" onmouseover="showMenu(this.id)" class="showmenu">使用道具</a>
+<a href="javascript:;" onclick="showWindow(&#39;rate&#39;, &#39;forum.php?mod=misc&amp;action=rate&amp;tid=143144&amp;pid=1747572&#39;, &#39;get&#39;, -1);return false;">评分</a>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport1747572&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=1747572&amp;tid=143144&amp;fid=43&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+<ul id="mgc_post_1747572_menu" class="p_pop mgcmn" style="display: none;">
+<li><a href="http://www.apkbus.com/home.php?mod=magic&mid=namepost&idtype=pid&id=1747572:143144" id="a_namepost_1747572" onclick="showWindow(this.id, this.href)"><img src="./b_files/namepost.small.gif">显身卡</a></li><li>
+</li></ul>
+<script type="text/javascript" reload="1">checkmgcmn('post_1747572')</script>
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="postlistreply" class="pl"><div id="post_new" class="viewthread_table" style="display: none"></div></div>
+<div id="hiddenpoststip"><a href="javascript:display_blocked_post();">还有一些帖子被系统自动隐藏，点此展开</a></div>
+<div id="hiddenposts"></div>
+</div>
+
+<div class="xi2 mbm pbm bbs">
+<script type="text/javascript">
+$('modmenu').lastChild.style.visibility = 'hidden';
+document.write($('modmenu').innerHTML);
+</script><a href="http://www.apkbus.com/portal.php?mod=portalcp&ac=article&from_idtype=tid&from_id=143144">生成文章</a><span class="pipe" style="visibility: hidden;">|</span>
+</div>
+
+<form method="post" autocomplete="off" name="modactions" id="modactions">
+<input type="hidden" name="formhash" value="21a9e52b">
+<input type="hidden" name="optgroup">
+<input type="hidden" name="operation">
+<input type="hidden" name="listextra" value="page%3D1">
+<input type="hidden" name="page" value="1">
+</form>
+
+
+<div class="pgbtn"><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&page=2" hidefocus="true" class="bm_h">下一页 »</a></div>
+
+<div class="pgs mtm mbm cl">
+<div class="pg"><strong>1</strong><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&extra=page%3D1&page=2">2</a><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&extra=page%3D1&page=3">3</a><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&extra=page%3D1&page=4">4</a><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&extra=page%3D1&page=5">5</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location=&#39;forum.php?mod=viewthread&amp;tid=143144&amp;extra=page%3D1&amp;page=&#39;+this.value;; doane(event);}"><span title="共 5 页"> / 5 页</span></label><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=143144&extra=page%3D1&page=2" class="nxt">下一页</a></div><span class="pgb y" id="visitedforumstmp" onmouseover="$(&#39;visitedforums&#39;).id = &#39;visitedforumstmp&#39;;this.id = &#39;visitedforums&#39;;showMenu({&#39;ctrlid&#39;:this.id,&#39;pos&#39;:&#39;21&#39;})"><a href="http://www.apkbus.com/forum.php?mod=forumdisplay&fid=43&page=1">返回列表</a></span>
+<a id="newspecialtmp" onmouseover="$(&#39;newspecial&#39;).id = &#39;newspecialtmp&#39;;this.id = &#39;newspecial&#39;;showMenu({&#39;ctrlid&#39;:this.id})" onclick="showWindow(&#39;newthread&#39;, &#39;forum.php?mod=post&amp;action=newthread&amp;fid=43&#39;)" href="javascript:;" title="发新帖"><img src="./b_files/pn_post.png" alt="发新帖"></a>
+<a id="post_replytmp" onclick="showWindow(&#39;reply&#39;, &#39;forum.php?mod=post&amp;action=reply&amp;fid=43&amp;tid=143144&#39;)" href="javascript:;" title="回复"><img src="./b_files/pn_reply.png" alt="回复"></a>
+</div>
+
+<!--[diy=diyfastposttop]--><div id="diyfastposttop" class="area"></div><!--[/diy]-->
+<script type="text/javascript">
+var postminchars = parseInt('10');
+var postmaxchars = parseInt('1000000000000');
+var disablepostctrl = parseInt('0');
+</script>
+
+<div id="f_pst" class="pl bm bmw">
+<form method="post" autocomplete="off" id="fastpostform" action="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144&extra=page%3D1&replysubmit=yes&infloat=yes&handlekey=fastpost" onsubmit="return fastpostvalidate(this)">
+<table cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls">
+<div class="avatar avtm"><img src="./b_files/avatar(7).php"></div></td>
+<td class="plc">
+
+<span id="fastpostreturn"></span>
+
+
+<div class="cl">
+<div id="fastsmiliesdiv" class="y"><div id="fastsmiliesdiv_data"><div id="fastsmilies"><table cellspacing="0" cellpadding="0"><tbody><tr></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 50)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:6_160:}&#39;)" id="fastpostsmilie_160_td"><img id="smilie_160" width="20" height="20" src="./b_files/022.gif" alt="{:6_160:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 50)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:6_158:}&#39;)" id="fastpostsmilie_158_td"><img id="smilie_158" width="20" height="20" src="./b_files/006.gif" alt="{:6_158:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 50)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:6_157:}&#39;)" id="fastpostsmilie_157_td"><img id="smilie_157" width="20" height="20" src="./b_files/048.gif" alt="{:6_157:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 50)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:6_156:}&#39;)" id="fastpostsmilie_156_td"><img id="smilie_156" width="20" height="20" src="./b_files/054.gif" alt="{:6_156:}"></td></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 50)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:6_155:}&#39;)" id="fastpostsmilie_155_td"><img id="smilie_155" width="20" height="20" src="./b_files/045.gif" alt="{:6_155:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 50)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:6_154:}&#39;)" id="fastpostsmilie_154_td"><img id="smilie_154" width="20" height="20" src="./b_files/014.gif" alt="{:6_154:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 50)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:6_153:}&#39;)" id="fastpostsmilie_153_td"><img id="smilie_153" width="20" height="20" src="./b_files/017.gif" alt="{:6_153:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 50)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:6_152:}&#39;)" id="fastpostsmilie_152_td"><img id="smilie_152" width="20" height="20" src="./b_files/051.gif" alt="{:6_152:}"></td></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 50)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:6_151:}&#39;)" id="fastpostsmilie_151_td"><img id="smilie_151" width="20" height="20" src="./b_files/049.gif" alt="{:6_151:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 50)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:6_150:}&#39;)" id="fastpostsmilie_150_td"><img id="smilie_150" width="20" height="20" src="./b_files/018.gif" alt="{:6_150:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 50)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:6_163:}&#39;)" id="fastpostsmilie_163_td"><img id="smilie_163" width="20" height="20" src="./b_files/036.gif" alt="{:6_163:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 50)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:6_172:}&#39;)" id="fastpostsmilie_172_td"><img id="smilie_172" width="20" height="20" src="./b_files/055.gif" alt="{:6_172:}"></td></tr></tbody></table></div></div></div><div class="hasfsl" id="fastposteditor">
+<div class="tedt mtn">
+<div class="bar">
+<span class="y">
+<a href="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144" onclick="return switchAdvanceMode(this.href)">高级模式</a>
+</span><script src="./b_files/seditor.js" type="text/javascript"></script>
+<div class="fpd">
+<a href="javascript:;" title="文字加粗" class="fbld" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;[b]&#39;, &#39;[/b]&#39;);doane(event);">B</a>
+<a href="javascript:;" title="设置文字颜色" class="fclr" id="fastpostforecolor" onclick="showColorBox(this.id, 2, &#39;fastpost&#39;);doane(event);">Color</a>
+<a id="fastpostimg" href="javascript:;" title="图片" class="fmg" onclick="seditor_menu(&#39;fastpost&#39;, &#39;img&#39;);doane(event);">Image</a>
+<a id="fastposturl" href="javascript:;" title="添加链接" class="flnk" onclick="seditor_menu(&#39;fastpost&#39;, &#39;url&#39;);doane(event);">Link</a>
+<a id="fastpostquote" href="javascript:;" title="引用" class="fqt" onclick="seditor_menu(&#39;fastpost&#39;, &#39;quote&#39;);doane(event);">Quote</a>
+<a id="fastpostcode" href="javascript:;" title="代码" class="fcd" onclick="seditor_menu(&#39;fastpost&#39;, &#39;code&#39;);doane(event);">Code</a>
+<a href="javascript:;" class="fsml" id="fastpostsml" onclick="showMenu({&#39;ctrlid&#39;:this.id,&#39;evt&#39;:&#39;click&#39;,&#39;layer&#39;:2});return false;">Smilies</a>
+<script type="text/javascript" reload="1">smilies_show('fastpostsmiliesdiv', 8, 'fastpost');</script>
+<script src="./b_files/at.js" type="text/javascript"></script>
+<a id="fastpostat" href="javascript:;" title="@朋友" class="fat" onclick="seditor_menu(&#39;fastpost&#39;, &#39;at&#39;);doane(event);">@朋友</a>
+<span class="pipe z">|</span><object id="SWFUpload_0" type="application/x-shockwave-flash" data="http://www.apkbus.com/static/image/common/swfupload.swf?preventswfcaching=1396623942390" width="17" height="25" class="swfupload"><param name="wmode" value="transparent"><param name="movie" value="static/image/common/swfupload.swf?preventswfcaching=1396623942390"><param name="quality" value="high"><param name="allowScriptAccess" value="always"><param name="flashvars" value="movieName=SWFUpload_0&amp;uploadURL=http%3A%2F%2Fwww.apkbus.com%2Fmisc.php%3Fmod%3Dswfupload%26action%3Dswfupload%26operation%3Dupload%26fid%3D43&amp;useQueryString=false&amp;requeueOnError=false&amp;httpSuccess=&amp;assumeSuccessTimeout=0&amp;params=uid%3D172268%26amp%3Bhash%3D93cec1f0e87c169303327cb9677a7da5&amp;filePostName=Filedata&amp;fileTypes=*.chm%3B*.pdf%3B*.zip%3B*.rar%3B*.tar%3B*.gz%3B*.bzip2%3B*.gif%3B*.jpg%3B*.jpeg%3B*.png%3B*.doc%3B*.docx%3B*.jar%3B*.ppt&amp;fileTypesDescription=All%20Support%20Formats&amp;fileSizeLimit=16383&amp;fileUploadLimit=0&amp;fileQueueLimit=0&amp;debugEnabled=false&amp;buttonImageURL=%2Fstatic%2Fimage%2Fcommon%2Fuploadbutton_small.png&amp;buttonWidth=17&amp;buttonHeight=25&amp;buttonText=&amp;buttonTextTopPadding=0&amp;buttonTextLeftPadding=0&amp;buttonTextStyle=color%3A%20%23000000%3B%20font-size%3A%2016pt%3B&amp;buttonAction=-110&amp;buttonDisabled=false&amp;buttonCursor=-2"></object></div></div>
+<div class="area">
+<textarea rows="6" cols="80" name="message" id="fastpostmessage" onkeydown="seditor_ctlent(event, &#39;fastpostvalidate($(\&#39;fastpostform\&#39;))&#39;);" tabindex="4" class="pt"></textarea>
+</div>
+</div>
+</div>
+</div>
+<div id="seccheck_fastpost">
+</div>
+
+<script type="text/javascript">
+var editorid = '';
+var ATTACHNUM = {'imageused':0,'imageunused':0,'attachused':0,'attachunused':0}, ATTACHUNUSEDAID = new Array(), IMGUNUSEDAID = new Array();
+</script>
+
+<input type="hidden" name="posttime" id="posttime" value="1396623927">
+<div class="upfl hasfsl">
+<table cellpadding="0" cellspacing="0" border="0" id="attach_tblheader" style="display: none;">
+<tbody><tr>
+<td>点击附件文件名添加到帖子内容中</td>
+<td class="atds">描述</td>
+<td class="attc"></td>
+</tr>
+</tbody></table>
+<div class="fieldset flash" id="attachlist"></div>
+<script src="./b_files/upload.js" type="text/javascript"></script><script type="text/javascript">
+var upload = new SWFUpload({
+upload_url: "http://www.apkbus.com/misc.php?mod=swfupload&action=swfupload&operation=upload&fid=43",
+post_params: {"uid" : "172268", "hash":"93cec1f0e87c169303327cb9677a7da5"},
+file_size_limit : "16383",
+file_types : "*.chm;*.pdf;*.zip;*.rar;*.tar;*.gz;*.bzip2;*.gif;*.jpg;*.jpeg;*.png;*.doc;*.docx;*.jar;*.ppt",
+file_types_description : "All Support Formats",
+file_upload_limit : 0,
+file_queue_limit : 0,
+swfupload_preload_handler : preLoad,
+swfupload_load_failed_handler : loadFailed,
+file_dialog_start_handler : fileDialogStart,
+file_queued_handler : fileQueued,
+file_queue_error_handler : fileQueueError,
+file_dialog_complete_handler : fileDialogComplete,
+upload_start_handler : uploadStart,
+upload_progress_handler : uploadProgress,
+upload_error_handler : uploadError,
+upload_success_handler : uploadSuccess,
+upload_complete_handler : uploadComplete,
+button_image_url : "static/image/common/uploadbutton_small.png",
+button_placeholder_id : "spanButtonPlaceholder",
+button_width: 17,
+button_height: 25,
+button_cursor:SWFUpload.CURSOR.HAND,
+button_window_mode: "transparent",
+custom_settings : {
+progressTarget : "attachlist",
+uploadSource: 'forum',
+uploadType: 'attach',
+uploadFrom: 'fastpost'
+},
+debug: false
+});
+</script>
+</div>
+
+<input type="hidden" name="formhash" value="21a9e52b">
+<input type="hidden" name="usesig" value="1">
+<input type="hidden" name="subject" value="  ">
+<p class="ptm pnpost">
+<a href="http://www.apkbus.com/home.php?mod=spacecp&ac=credit&op=rule&fid=43" class="y" target="_blank">本版积分规则</a>
+<button type="submit" onmouseover="checkpostrule(&#39;seccheck_fastpost&#39;, &#39;ac=reply&#39;);this.onmouseover=null" name="replysubmit" id="fastpostsubmit" class="pn pnc vm" value="replysubmit" tabindex="5"><strong>发表回复</strong></button>
+
+</p><div class="mtm">
+<input name="romotepic" id="romotepic" type="checkbox" value="1" checked="checked">
+<label for="romotepic">本地化远程图片</label>
+</div>
+<label for="fastpostrefresh"><input id="fastpostrefresh" type="checkbox" class="pc">回帖后跳转到最后一页</label>
+<script type="text/javascript">if(getcookie('fastpostrefresh') == 1) {$('fastpostrefresh').checked=true;}</script>
+<p></p>
+</td>
+</tr>
+</tbody></table>
+</form>
+</div>
+
+<script type="text/javascript">
+var connect_qzone_share_url = '';
+var connect_weibo_share_url = '';
+var connect_thread_info = {
+thread_url: 'http://www.apkbus.com/android-143144-1-1.html',
+thread_id: '143144',
+post_id: '',
+forum_id: '43',
+author_id: '',
+author: ''
+};
+
+connect_autoshare = '';
+connect_isbind = '0';
+if(connect_autoshare == 1 && connect_isbind) {
+_attachEvent(window, 'load', function(){
+connect_share(connect_weibo_share_url, connect_openid);
+});
+}
+</script>
+
+
+<div id="visitedforums_menu" class="p_pop blk cl" style="display: none;">
+<table cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td id="v_forums">
+<h3 class="mbn pbn bbda xg1">浏览过的版块</h3>
+<ul class="xl xl1">
+<li><a href="http://www.apkbus.com/forum.php?mod=forumdisplay&fid=96">Android开发交流</a></li></ul>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div id="md_35_menu" class="tip tip_4" style="display: none;">
+<div class="tip_horn"></div>
+<div class="tip_c">
+<h4>社区QQ达人</h4>
+<p>使用QQ帐号登录论坛的用户</p>
+</div>
+</div>
+<script type="text/javascript">
+new lazyload();
+</script>
+<script type="text/javascript">document.onkeyup = function(e){keyPageScroll(e, 0, 1, 'forum.php?mod=viewthread&tid=143144', 1);}</script>
+</div>
+
+<div class="wp mtn">
+<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<script type="text/javascript">
+function succeedhandle_followmod(url, msg, values) {
+var fObj = $('followmod_'+values['fuid']);
+if(values['type'] == 'add') {
+fObj.innerHTML = '不收听';
+fObj.href = 'home.php?mod=spacecp&ac=follow&op=del&fuid='+values['fuid'];
+} else if(values['type'] == 'del') {
+fObj.innerHTML = '收听TA';
+fObj.href = 'home.php?mod=spacecp&ac=follow&op=add&hash=21a9e52b&fuid='+values['fuid'];
+}
+}
+var blockedPIDs = [1732878,1732883];
+fixed_avatar([1660165,1661578,1663554,1676502,1686927,1725683,1732878,1732883,1747555,1747572], 1);
+</script>	</div>
+<div class="focus" id="sitefocus">
+<div class="bm">
+<div class="bm_h cl">
+<a href="javascript:;" onclick="setcookie(&#39;nofocus_forum&#39;, 1, 5*3600);$(&#39;sitefocus&#39;).style.display=&#39;none&#39;" class="y" title="关闭">关闭</a>
+<h2>
+今日头条<span id="focus_ctrl" class="fctrl" style="display: none;"><img src="./b_files/pic_nv_prev.gif" alt="上一条" title="上一条" id="focusprev" class="cur1" onclick="showfocus(&#39;prev&#39;);"> <em><span id="focuscur">1</span>/1</em> <img src="./b_files/pic_nv_next.gif" alt="下一条" title="下一条" id="focusnext" class="cur1" onclick="showfocus(&#39;next&#39;)"></span>
+</h2>
+</div>
+<div class="bm_c" id="focus_con">
+<dl class="xld cl bbda">
+<dt><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=165801" class="xi2" target="_blank">爱加密支招保护“真爱”，探讨#app安全# 赢万元大奖</a></dt>
+<dd>APKBUS再次携手爱加密邀您谈谈APP保护加固，防止反编译的那些事儿。三星GALAXY Note3、性能超强大音箱、森海塞尔耳机、空气加湿器、正品斯伯丁篮球、正品耐克足球等奖品应有尽有！凡参与者即有下载豆！</dd>
+</dl>
+<p class="ptn cl"><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=165801" class="xi2 y" target="_blank">查看 »</a></p>
+</div>
+</div>
+</div><div class="bm_c" style="display: none" id="focus_0">
+<dl class="xld cl bbda">
+<dt><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=165801" class="xi2" target="_blank">爱加密支招保护“真爱”，探讨#app安全# 赢万元大奖</a></dt>
+<dd>APKBUS再次携手爱加密邀您谈谈APP保护加固，防止反编译的那些事儿。三星GALAXY Note3、性能超强大音箱、森海塞尔耳机、空气加湿器、正品斯伯丁篮球、正品耐克足球等奖品应有尽有！凡参与者即有下载豆！</dd>
+</dl>
+<p class="ptn cl"><a href="http://www.apkbus.com/forum.php?mod=viewthread&tid=165801" class="xi2 y" target="_blank">查看 »</a></p>
+</div><script type="text/javascript">
+var focusnum = 1;
+if(focusnum < 2) {
+$('focus_ctrl').style.display = 'none';
+}
+if(!$('focuscur').innerHTML) {
+var randomnum = parseInt(Math.round(Math.random() * focusnum));
+$('focuscur').innerHTML = Math.max(1, randomnum);
+}
+showfocus();
+var focusautoshow = window.setInterval('showfocus(\'next\', 1);', 5000);
+</script>
+
+
+<script type="text/javascript">
+var rel_tid = "143144";
+var rel_title = "Android%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98--%E6%89%8B%E6%9C%BA%E5%8D%AB%E5%A3%AB10--GPS%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%8F%91%E9%80%81%E7%9F%AD%E4%BF%A1%E6%8C%87%E4%BB%A4";
+var rel_reltid = "0";
+var rel_prepos = "";
+var my_siteid = "5578702";
+var rel_uid = "172268";
+var rel_views = "4316";
+var rel_replies = "44";
+var rel_page = "1";
+var rel_show = "1";
+</script>
+<script src="./b_files/relate_subject.js" type="text/javascript" charset="GBK"></script>
+
+
+
+<script type="text/javascript">
+_attachEvent(window, 'load', getForbiddenFormula, document);
+function getForbiddenFormula() {
+var toGetForbiddenFormulaFIds = function () {
+ajaxget('plugin.php?id=cloudsearch&formhash=21a9e52b');
+};
+var a = document.body.getElementsByTagName('a');
+for(var i = 0;i < a.length;i++){
+if(a[i].getAttribute('sc')) {
+a[i].setAttribute('mid', hash(a[i].href));
+a[i].onmousedown = function() {toGetForbiddenFormulaFIds();};
+}
+}
+var btn = document.body.getElementsByTagName('button');
+for(var i = 0;i < btn.length;i++){
+if(btn[i].getAttribute('sc')) {
+btn[i].setAttribute('mid', hash(btn[i].id));
+btn[i].onmousedown = function() {toGetForbiddenFormulaFIds();};
+}
+}
+}
+</script>
+
+
+
+<script src="./b_files/qshare.js" type="text/javascript"></script><script type="text/javascript">_share_tencent_weibo(null, $C("t_f", null, "td"), "", "801077780 ", "Android开发论坛 - 安卓开发论坛 - Android开发 - 安卓论坛 - 移动互联网门户");</script>
+
+<script type="text/javascript">
+$('newspecial').onclick=function(){ajaxget('plugin.php?id=vfastpost:stat&subop=stat&ac=cl_v_t&hash=25c1437a6cbce383674692c4fac44913');setTimeout(function(){showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=43');},500);};
+$('newspecialtmp').onclick=function(){ajaxget('plugin.php?id=vfastpost:stat&subop=stat&ac=cl_v_t&hash=25c1437a6cbce383674692c4fac44913');setTimeout(function(){showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=43');},500);};
+$('post_reply').onclick=function(){ajaxget('plugin.php?id=vfastpost:stat&subop=stat&ac=cl_v_r&hash=25c1437a6cbce383674692c4fac44913');setTimeout(function(){showWindow('reply', 'forum.php?mod=post&action=reply&fid=43&tid=143144');},500);};
+$('post_replytmp').onclick=function(){ajaxget('plugin.php?id=vfastpost:stat&subop=stat&ac=cl_v_r&hash=25c1437a6cbce383674692c4fac44913');setTimeout(function(){showWindow('reply', 'forum.php?mod=post&action=reply&fid=43&tid=143144');},500);};
+</script><div id="ft" class="wp cl">
+<div id="flk" class="y">
+<p>
+<a href="http://wpa.qq.com/msgrd?V=3&Uin=1523509460&Site=Android%E5%BC%80%E5%8F%91%E8%AE%BA%E5%9D%9B%20-%20%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E8%AE%BA%E5%9D%9B%20-%20Android%E5%BC%80%E5%8F%91%20-%20%E5%AE%89%E5%8D%93%E8%AE%BA%E5%9D%9B%20-%20%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91%E9%97%A8%E6%88%B7&Menu=yes&from=discuz" target="_blank" title="QQ"><img src="./b_files/site_qq.jpg" alt="QQ"></a><span class="pipe">|</span><a href="http://www.apkbus.com/forum.php?mod=misc&action=showdarkroom">小黑屋</a><span class="pipe">|</span><a href="http://www.apkbus.com/forum.php?mobile=yes">手机版</a><span class="pipe">|</span><a href="http://www.apkbus.com/archiver/">Archiver</a><span class="pipe">|</span><a href="http://www.apkbus.com/" target="_blank">广告投放guoang@jjmatch.com</a><span class="pipe">|</span><strong><a href="http://www.apkbus.com/" target="_blank">安卓巴士</a></strong>
+( <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP证080116号</a> )&nbsp;<a href="http://discuz.qq.com/service/security" target="_blank" title="防水墙保卫网站远离侵害"><img src="./b_files/security.png"></a>&nbsp;&nbsp;<a href="http://stats.discuz.qq.com/?ADTAG=FROUM.FOOTER.CLICK.ICON" title="腾讯分析" target="_blank"><img title="腾讯分析" src="./b_files/toss_12.gif" border="0"></a><script type="text/javascript" src="./b_files/ping.js" charset="utf-8"></script><script type="text/javascript" reload="1">pgvMain({"discuzParams":{"r2":"5578702","ui":"172268","ty":2,"rt":"forum","md":"viewthread","fi":"43","ti":"143144","pn":1,"qq":"010","logo":12},"extraParams":""});</script><script src="./b_files/stat.php" language="JavaScript"></script><script src="./b_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=2597274" target="_blank" title="站长统计">站长统计</a>
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc6f55658260e114bf8e08aa745318251' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./b_files/h.js" type="text/javascript"></script>
+</p>
+<p class="xs0">
+GMT+8, 2014-4-4 23:05<span id="debuginfo">
+, Processed in 0.431817 second(s), 51 queries
+.
+</span>
+</p>
+</div>
+<div id="frt">
+<p>Powered by <strong><a href="http://www.haoweek.com/" title="Weekend" target="_blank"> Weekend </a><!--周末设计商业版支持，建议保留，已免影响技术支持，谢谢！--><a href="http://haoweek.com/" title="Design" target="_blank">Design </a><!--周末设计商业版支持，建议保留，已免影响技术支持，谢谢！--><a href="http://www.discuz.net/" target="_blank">Discuz!</a></strong> <em>X3.1</em></p>
+<p class="xs0">© 2001-2013 <a href="http://www.comsenz.com/" target="_blank">Comsenz Inc.</a></p>
+</div></div>
+<script src="./b_files/home.php" type="text/javascript"></script>
+<div class="focus plugin" id="ip_notice" style=""></div>
+<script type="text/javascript">ipNotice();</script>
+<script type="text/javascript">noticeTitle();</script>
+<script src="./b_files/html5notification.js" type="text/javascript"></script>
+<script type="text/javascript">
+var h5n = new Html5notification();
+if(h5n.issupport()) {
+h5n.shownotification('notice_system', 'http://www.apkbus.com/home.php?mod=space&do=notice&view=system', 'http://www.apkbus.com/uc_server/avatar.php?uid=172268&size=small', '系统提醒 (7)', '有新的提醒，快去看看吧');
+}
+</script>
+<div id="scrolltop" style="left: auto; right: 0px; visibility: hidden;">
+<span><a href="http://www.apkbus.com/forum.php?mod=post&action=reply&fid=43&tid=143144&extra=page%3D1&page=1" onclick="showWindow(&#39;reply&#39;, this.href)" class="replyfast" title="快速回复"><b>快速回复</b></a></span>
+<span hidefocus="true"><a title="返回顶部" onclick="window.scrollTo(&#39;0&#39;,&#39;0&#39;)" class="scrolltopa"><b>返回顶部</b></a></span>
+<span>
+<a href="http://www.apkbus.com/forum.php?mod=forumdisplay&fid=43" hidefocus="true" class="returnlist" title="返回列表"><b>返回列表</b></a>
+</span>
+</div>
+<script type="text/javascript">_attachEvent(window, 'scroll', function () { showTopLink(); });checkBlind();</script>
+			<div id="discuz_tips" style="display:none;"></div>
+			<script type="text/javascript">
+				var tipsinfo = '5578702|X3.1|0.6||0||172268|10|1396623927|0abec3e0f53c0e30fd754c4d834e0499|2';
+			</script>
+			<script src="./b_files/discuz_tips.js" type="text/javascript" charset="UTF-8"></script>
+
+</body></html>
